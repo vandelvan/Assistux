@@ -13,11 +13,13 @@ public class Texto {
 			JTextField inpt = new JTextField();
 			if(texto.equalsIgnoreCase("algo") == true) {
 				inpt.setText("JAJAJAXD");
+				inpt.setEditable(false);
 				 inpt.setBounds(0, espacio, 66, 15);
 				 espacio-=20;
 			}
 			else {
 				inpt.setText("Vuelva a intentarlo :c");
+				inpt.setEditable(false);
 				 inpt.setBounds(0, espacio, 200, 15);
 				 espacio-=20;
 			}
