@@ -2,6 +2,8 @@ import javax.swing.JTextField;
 
 public class Texto {
 	
+	int espacio=500;
+	
 		/*Constructor*/
 		Texto() {
 		}
@@ -11,11 +13,13 @@ public class Texto {
 			JTextField inpt = new JTextField();
 			if(texto.equalsIgnoreCase("algo") == true) {
 				inpt.setText("JAJAJAXD");
-				 inpt.setBounds(0, 500, 66, 15);
+				 inpt.setBounds(0, espacio, 66, 15);
+				 espacio-=20;
 			}
 			else {
 				inpt.setText("Vuelva a intentarlo :c");
-				 inpt.setBounds(0, 484, 200, 15);
+				 inpt.setBounds(0, espacio, 200, 15);
+				 espacio-=20;
 			}
 			return inpt;
 		}
