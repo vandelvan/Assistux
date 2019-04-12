@@ -9,6 +9,10 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+import javax.swing.UIManager;
+import java.awt.Color;
+import java.awt.Toolkit;
+import java.awt.SystemColor;
 
 public class Main extends JFrame {
 
@@ -35,24 +39,33 @@ public class Main extends JFrame {
 	 * Create the frame.
 	 */
 	public Main() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("/icon/assistux_o16_icon.ico")));
+		setBackground(UIManager.getColor("ScrollBar.trackHighlightForeground"));
 		setTitle("Assistux");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(0, 200, 300, 600);
+		setBounds(0, 300, 330, 600);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 0, 0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		txtInput = new JTextField();
 		txtInput.setText("Escribe algo...");
-		txtInput.setBounds(12, 539, 211, 19);
+		txtInput.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtInput.setText("");
+			}
+		});
+		txtInput.setBounds(19, 520, 211, 29);
 		contentPane.add(txtInput);
 		txtInput.setColumns(10);
 		
-		Texto t = new Texto();
-		
+		final Texto t = new Texto();
+
 		JButton btnOk = new JButton("OK");
+		btnOk.setBackground(Color.WHITE);
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String texto = txtInput.getText();
@@ -60,7 +73,7 @@ public class Main extends JFrame {
 				contentPane.add(inpt);
 			}
 		});
-		btnOk.setBounds(225, 536, 53, 25);
+		btnOk.setBounds(240, 520, 53, 29);
 		contentPane.add(btnOk);
 	}
 }
