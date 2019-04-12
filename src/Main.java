@@ -1,5 +1,5 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -8,11 +8,9 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JLabel;
 import javax.swing.UIManager;
 import java.awt.Color;
 import java.awt.Toolkit;
-import java.awt.SystemColor;
 
 public class Main extends JFrame {
 
@@ -51,13 +49,11 @@ public class Main extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		txtInput = new JTextField();
+		txtInput = new JTextField(10);
 		txtInput.setText("Escribe algo...");
-		txtInput.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				txtInput.setText("");
-			}
-		});
+		TextPrompt placeholder = new TextPrompt("Escribe algo...", txtInput);
+	    placeholder.changeAlpha(0.75f);
+	    placeholder.changeStyle(Font.ITALIC);
 		txtInput.setBounds(19, 520, 211, 29);
 		contentPane.add(txtInput);
 		txtInput.setColumns(10);

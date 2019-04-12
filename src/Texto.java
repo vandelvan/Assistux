@@ -2,7 +2,7 @@ import javax.swing.JTextField;
 
 public class Texto {
 	
-	int espacio=500;
+	int espacio=480;
 	
 		/*Constructor*/
 		Texto() {
@@ -16,19 +16,19 @@ public class Texto {
 			if(texto.equalsIgnoreCase("algo") == true) {
 				inpt.setText("Qué gracioso xd");
 				inpt.setEditable(false);
-				 inpt.setBounds(0, espacio, 66, 15);
-				 espacio-=20;
-			}else {
-				String txt = texto.replaceAll("\\D+","");
-				if(txt!=""){
-					inpt = matematicas(texto);
-					}else {
+				 inpt.setBounds(10, espacio, 200, 20);
+				 espacio-=30;
+			}//else {
+				//String txt = texto.replaceAll("\\D+","");
+				//if(txt != ""){
+					//inpt = matematicas(texto);
+					else {
 						inpt.setText("Vuelva a intentarlo :c");
 						inpt.setEditable(false);
-						inpt.setBounds(0, espacio, 200, 15);
-						espacio-=20;
+						inpt.setBounds(10, espacio, 200, 20);
+						espacio-=30;
 					}
-				}
+				//}
 			return inpt;
 		} // fin metodo getInput
 		
