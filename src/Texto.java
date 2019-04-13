@@ -13,22 +13,22 @@ public class Texto {
 		//Este metodo compara el texto ingresado por el usuario y regresa un dialogo
 		JTextField getInput(String texto) {
 			JTextField inpt = new JTextField();
-			if(texto.equalsIgnoreCase("algo") == true) {
+			if(texto.equalsIgnoreCase("algo")) {
 				inpt.setText("Qué gracioso xd");
 				inpt.setEditable(false);
 				 inpt.setBounds(10, espacio, 200, 20);
 				 espacio-=30;
-			}//else {
-				//String txt = texto.replaceAll("\\D+","");
-				//if(txt != ""){
-					//inpt = matematicas(texto);
-					else {
+			}else {
+				String txt = texto.replaceAll("\\D+","");
+				if(!txt.equals("")){
+					inpt = matematicas(texto);
+				}else {
 						inpt.setText("Vuelva a intentarlo :c");
 						inpt.setEditable(false);
 						inpt.setBounds(10, espacio, 200, 20);
 						espacio-=30;
 					}
-				//}
+				}
 			return inpt;
 		} // fin metodo getInput
 		
