@@ -46,7 +46,7 @@ public class Texto {
 				   texto.indexOf("7")!=-1||
 				   texto.indexOf("8")!=-1||
 				   texto.indexOf("9")!=-1) {
-					System.out.print("mas");
+					inpt = suma(texto);
 				}
 			}else {
 				if(texto.indexOf("-")!=-1) {
@@ -60,7 +60,7 @@ public class Texto {
 					   texto.indexOf("7")!=-1||
 					   texto.indexOf("8")!=-1||
 					   texto.indexOf("9")!=-1) {
-						System.out.print("menos");
+						inpt = resta(texto);
 					}
 				}else {
 						if(texto.indexOf("*")!=-1) {
@@ -74,7 +74,7 @@ public class Texto {
 							   texto.indexOf("7")!=-1||
 							   texto.indexOf("8")!=-1||
 							   texto.indexOf("9")!=-1) {
-								System.out.print("por");
+								inpt = multi(texto);
 							}
 						}else {
 							if(texto.indexOf("/")!=-1) {
@@ -88,12 +88,195 @@ public class Texto {
 								   texto.indexOf("7")!=-1||
 								   texto.indexOf("8")!=-1||
 								   texto.indexOf("9")!=-1) {
-									System.out.print("division");
+									inpt = division(texto);
 								}
 							}
 						}
 					}
 				}
 			return inpt;
-		}
+		} //Fin Matematicas
+		
+		/***********************
+		 * 
+		 * BLOQUE DE OPERACIONES
+		 * 
+		 ***********************/
+		
+		//Funcion que suma
+		JTextField suma(String texto) {
+			JTextField inpt = new JTextField();
+			String s1 = "";
+			String s2 = "";
+			int res = 0;
+			for(int i = 0; i < texto.length(); i++) {
+				if(texto.charAt(i) == '0' ||
+				   texto.charAt(i) == '1' ||
+				   texto.charAt(i) == '2' ||
+				   texto.charAt(i) == '3' ||
+				   texto.charAt(i) == '4' ||
+				   texto.charAt(i) == '5' ||
+				   texto.charAt(i) == '6' ||
+				   texto.charAt(i) == '7' ||
+				   texto.charAt(i) == '8' ||
+				   texto.charAt(i) == '9' &&
+				   texto.charAt(i+1) == '+'
+						) {
+					s1 += texto.charAt(i);
+				}
+				if(texto.charAt(i) == '0' ||
+				   texto.charAt(i) == '1' ||
+				   texto.charAt(i) == '2' ||
+				   texto.charAt(i) == '3' ||
+				   texto.charAt(i) == '4' ||
+				   texto.charAt(i) == '5' ||
+				   texto.charAt(i) == '6' ||
+				   texto.charAt(i) == '7' ||
+				   texto.charAt(i) == '8' ||
+				   texto.charAt(i) == '9' &&
+				   texto.charAt(i-1) == '+'
+						){
+					s2+=texto.charAt(i);
+				}
+			}
+			System.out.print(s1+" "+s2);
+			res = (Integer.parseInt(s1)+Integer.parseInt(s2));
+			inpt.setText(""+res);
+			inpt.setEditable(false);
+			inpt.setBounds(10, espacio, 200, 20);
+			espacio-=30;
+			return inpt;
+		}//Fin funcion que suma
+		
+		//Funcion que resta
+		JTextField resta(String texto) {
+			JTextField inpt = new JTextField();
+			String r1 = "";
+			String r2 = "";
+			int res = 0;
+			for(int i = 0; i < texto.length(); i++) {
+				if(texto.charAt(i) == '0' ||
+				   texto.charAt(i) == '1' ||
+				   texto.charAt(i) == '2' ||
+				   texto.charAt(i) == '3' ||
+				   texto.charAt(i) == '4' ||
+				   texto.charAt(i) == '5' ||
+				   texto.charAt(i) == '6' ||
+				   texto.charAt(i) == '7' ||
+				   texto.charAt(i) == '8' ||
+				   texto.charAt(i) == '9' &&
+				   texto.charAt(i+1) == '+'
+						) {
+					r1 += texto.charAt(i);
+				}
+				if(texto.charAt(i) == '0' ||
+				   texto.charAt(i) == '1' ||
+				   texto.charAt(i) == '2' ||
+				   texto.charAt(i) == '3' ||
+				   texto.charAt(i) == '4' ||
+				   texto.charAt(i) == '5' ||
+				   texto.charAt(i) == '6' ||
+				   texto.charAt(i) == '7' ||
+				   texto.charAt(i) == '8' ||
+				   texto.charAt(i) == '9' &&
+				   texto.charAt(i-1) == '+'
+						){
+					r2+=texto.charAt(i);
+				}
+			}
+			res = (Integer.parseInt(r1)-Integer.parseInt(r2));
+			inpt.setText(""+res);
+			inpt.setEditable(false);
+			inpt.setBounds(10, espacio, 200, 20);
+			espacio-=30;
+			return inpt;
+		}//Fin funcion que resta
+		
+		//Funcion que multiplica
+				JTextField multi(String texto) {
+					JTextField inpt = new JTextField();
+					String m1 = "";
+					String m2 = "";
+					int res = 0;
+					for(int i = 0; i < texto.length(); i++) {
+						if(texto.charAt(i) == '0' ||
+						   texto.charAt(i) == '1' ||
+						   texto.charAt(i) == '2' ||
+						   texto.charAt(i) == '3' ||
+						   texto.charAt(i) == '4' ||
+						   texto.charAt(i) == '5' ||
+						   texto.charAt(i) == '6' ||
+						   texto.charAt(i) == '7' ||
+						   texto.charAt(i) == '8' ||
+						   texto.charAt(i) == '9' &&
+						   texto.charAt(i+1) == '+'
+								) {
+							m1 += texto.charAt(i);
+						}
+						if(texto.charAt(i) == '0' ||
+						   texto.charAt(i) == '1' ||
+						   texto.charAt(i) == '2' ||
+						   texto.charAt(i) == '3' ||
+						   texto.charAt(i) == '4' ||
+						   texto.charAt(i) == '5' ||
+						   texto.charAt(i) == '6' ||
+						   texto.charAt(i) == '7' ||
+						   texto.charAt(i) == '8' ||
+						   texto.charAt(i) == '9' &&
+						   texto.charAt(i-1) == '+'
+								){
+							m2+=texto.charAt(i);
+						}
+					}
+					res = (Integer.parseInt(m1)*Integer.parseInt(m2));
+					inpt.setText(""+res);
+					inpt.setEditable(false);
+					inpt.setBounds(10, espacio, 200, 20);
+					espacio-=30;
+					return inpt;
+				}//Fin funcion que multiplica
+				
+				//Funcion que divide
+				JTextField division(String texto) {
+					JTextField inpt = new JTextField();
+					String d1 = "";
+					String d2 = "";
+					int res = 0;
+					for(int i = 0; i < texto.length(); i++) {
+						if(texto.charAt(i) == '0' ||
+						   texto.charAt(i) == '1' ||
+						   texto.charAt(i) == '2' ||
+						   texto.charAt(i) == '3' ||
+						   texto.charAt(i) == '4' ||
+						   texto.charAt(i) == '5' ||
+						   texto.charAt(i) == '6' ||
+						   texto.charAt(i) == '7' ||
+						   texto.charAt(i) == '8' ||
+						   texto.charAt(i) == '9' &&
+						   texto.charAt(i+1) == '+'
+								) {
+							d1 += texto.charAt(i);
+						}
+						if(texto.charAt(i) == '0' ||
+						   texto.charAt(i) == '1' ||
+						   texto.charAt(i) == '2' ||
+						   texto.charAt(i) == '3' ||
+						   texto.charAt(i) == '4' ||
+						   texto.charAt(i) == '5' ||
+						   texto.charAt(i) == '6' ||
+						   texto.charAt(i) == '7' ||
+						   texto.charAt(i) == '8' ||
+						   texto.charAt(i) == '9' &&
+						   texto.charAt(i-1) == '+'
+								){
+							d2+=texto.charAt(i);
+						}
+					}
+					res = (Integer.parseInt(d1)/Integer.parseInt(d2));
+					inpt.setText(""+res);
+					inpt.setEditable(false);
+					inpt.setBounds(10, espacio, 200, 20);
+					espacio-=30;
+					return inpt;
+				}//Fin funcion que divide
 }

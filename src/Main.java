@@ -50,7 +50,7 @@ public class Main extends JFrame {
 		contentPane.setLayout(null);
 		
 		txtInput = new JTextField(10);
-		txtInput.setText("Escribe algo...");
+		txtInput.setText("");
 		TextPrompt placeholder = new TextPrompt("Escribe algo...", txtInput);
 	    placeholder.changeAlpha(0.75f);
 	    placeholder.changeStyle(Font.ITALIC);
