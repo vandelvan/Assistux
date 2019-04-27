@@ -33,4 +33,29 @@ public class Texto {
 				}
 			return inpt;	//regresa el dialogo para colocarse
 		} // fin metodo getInput
+		
+		//Metodo para imprimir el input del usuario
+		JTextField printUserInput(String texto) {
+			JTextField uinpt = new JTextField();
+			uinpt.setText(texto);
+			uinpt.setEditable(false);
+			int ub = ubicacion(texto);	//cambia el tamaño del dialogo dependiendo de lo largo que sea el input
+			int an = ancho(texto);
+			uinpt.setBounds(ub, espacio, an, 20);
+			espacio-=30;
+			return uinpt;
+		}// fin metodo printUserInput
+		
+		/*METODOS PARA ASIGNAR EL ESPACIO DEL DIALOGO*/
+		int ubicacion(String texto) {
+			int ubicacion = 300;
+			ubicacion -= 6*texto.length();
+			return ubicacion;
+		}
+		
+		int ancho(String texto) {
+			int ancho = 20;
+			ancho += 6*texto.length();
+			return ancho;
+		}
 }

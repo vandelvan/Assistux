@@ -67,6 +67,11 @@ public class Matematicas {
 									   texto.indexOf("9")!=-1) {
 										inpt = division(texto);
 									}
+								}else {
+									inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
+									inpt.setEditable(false);
+									inpt.setBounds(10, espacio, 200, 20);
+									espacio-=30;
 								}
 							}
 						}

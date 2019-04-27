@@ -71,6 +71,9 @@ public class Main extends JFrame {
 				String texto = txtInput.getText();	//toma el string ingresado por el usuario
 				JTextField inpt = t.getInput(texto);	//lo manda a la funcion getInput de la clase Texto para analizarlo
 				contentPane.add(inpt);	//se coloca la respuesta obtenida por la funcion
+				JTextField uinpt = t.printUserInput(texto); //imprime el texto del usuario
+				contentPane.add(uinpt);
+				txtInput.setText(""); //resetea el input
 			}
 		});
 		btnOk.setBounds(240, 520, 53, 29);
