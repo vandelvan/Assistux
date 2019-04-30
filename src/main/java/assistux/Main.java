@@ -1,9 +1,9 @@
+package assistux;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Point;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -13,12 +13,15 @@ import javax.swing.UIManager;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 
 public class Main extends JFrame {
 
-	private JScrollPane contentPane;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	static JScrollPane contentPane;
 	private JTextField txtInput;
 
 	/**
@@ -61,17 +64,15 @@ public class Main extends JFrame {
 		txtInput.setBounds(19, 520, 211, 29);	//se coloca el input
 		contentPane.add(txtInput);
 		txtInput.setColumns(10);
-		
-		final Texto t = new Texto();
 
 		JButton btnOk = new JButton("OK");
 		btnOk.setBackground(Color.WHITE);
 		btnOk.addActionListener(new ActionListener() {	//Al dar clic a "ok"..
 			public void actionPerformed(ActionEvent e) {
 				String texto = txtInput.getText();	//toma el string ingresado por el usuario
-				JTextField inpt = t.getInput(texto);	//lo manda a la funcion getInput de la clase Texto para analizarlo
+				JTextField inpt = Texto.getInput(texto);	//lo manda a la funcion getInput de la clase Texto para analizarlo
 				contentPane.add(inpt);	//se coloca la respuesta obtenida por la funcion
-				JTextField uinpt = t.printUserInput(texto); //imprime el texto del usuario
+				JTextField uinpt = Texto.printUserInput(texto); //imprime el texto del usuario
 				contentPane.add(uinpt);
 				txtInput.setText(""); //resetea el input
 			}

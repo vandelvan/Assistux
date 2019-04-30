@@ -1,12 +1,11 @@
+package assistux;
 import javax.swing.JTextField;
 
 public class Matematicas {
 	String texto = "";
-	int espacio = 0;
 
 	Matematicas(String texto, int espacio){
 		this.texto = texto;
-		this.espacio = espacio;
 	}
 	
 	//Metodo para realizar operaciones matematicas
@@ -70,8 +69,6 @@ public class Matematicas {
 								}else {
 									inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
 									inpt.setEditable(false);
-									inpt.setBounds(10, espacio, 200, 20);
-									espacio-=30;
 								}
 							}
 						}
@@ -110,8 +107,6 @@ public class Matematicas {
 				res = (Integer.parseInt(s1)+Integer.parseInt(s2));	//calcula su resultado
 				inpt.setText(""+res);
 				inpt.setEditable(false);	//crea el dialogo
-				inpt.setBounds(10, espacio, 200, 20);
-				espacio-=30;
 				return inpt;	//lo regresa
 			}//Fin funcion que suma
 			
@@ -140,8 +135,6 @@ public class Matematicas {
 				res = (Integer.parseInt(r1)-Integer.parseInt(r2));
 				inpt.setText(""+res);
 				inpt.setEditable(false);
-				inpt.setBounds(10, espacio, 200, 20);
-				espacio-=30;
 				return inpt;
 			}//Fin funcion que resta
 			
@@ -170,8 +163,6 @@ public class Matematicas {
 						res = (Integer.parseInt(m1)*Integer.parseInt(m2));
 						inpt.setText(""+res);
 						inpt.setEditable(false);
-						inpt.setBounds(10, espacio, 200, 20);
-						espacio-=30;
 						return inpt;
 					}//Fin funcion que multiplica
 					
@@ -200,12 +191,6 @@ public class Matematicas {
 						res = (Integer.parseInt(d1)/Integer.parseInt(d2));
 						inpt.setText(""+res);
 						inpt.setEditable(false);
-						inpt.setBounds(10, espacio, 200, 20);
-						espacio-=30;
 						return inpt;
 					}//Fin funcion que divide
-				/*REGRESA EL ESPACIO*/
-				int getEspacio() {
-					return espacio;
-				}
 }
