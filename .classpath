@@ -12,16 +12,12 @@
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11/">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
 	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
-	<classpathentry kind="lib" path="/home/vandelvan/git/Assistux/javax.mail.jar"/>
-	<classpathentry kind="lib" path="/home/vandelvan/git/Assistux/activation.jar"/>
-	<classpathentry kind="lib" path="/home/vandelvan/git/Assistux/mail.jar"/>
-	<classpathentry kind="lib" path="/home/vandelvan/git/Assistux/additionnal.jar"/>
-	<classpathentry kind="lib" path="/home/vandelvan/git/Assistux/activation (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vandel/git/Assistux/activation (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vandel/git/Assistux/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vandel/git/Assistux/additionnal.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vandel/git/Assistux/javax.mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vandel/git/Assistux/mail.jar"/>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>

@@ -102,6 +102,7 @@ public class Correo {
         prop.put("mail.smtp.port", "587");				//Configuracion del Host de Gmail
         prop.put("mail.smtp.auth", "true");
         prop.put("mail.smtp.starttls.enable", "true");
+        prop.put("mail.smtp.ssl.trust", "smtp.gmail.com");
         
         Session session = Session.getInstance(prop,
                 new Authenticator() {
