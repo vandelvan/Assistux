@@ -54,7 +54,7 @@ public class Correo {
 	}
 	
 	public void colocarBotonEnvio() {
-		JButton btnEnviar = new JButton("Enviar");
+		final JButton btnEnviar = new JButton("Enviar");
 		btnEnviar.setBackground(Color.WHITE);
 		btnEnviar.addActionListener(new ActionListener() {	//Al dar clic a "enviar"..
 			public void actionPerformed(ActionEvent e) {
@@ -95,8 +95,8 @@ public class Correo {
     	
     	/*CUALQUIER CUENTA DE GOOGLE USADA DEBE TENER HABILITADO EN OPCIONES DE SEGUIRDAD "Acceso de aplicaciones poco seguras"*/
     	
-    	String username = "user";	//Usuario de Google para enviar correos
-    	String password = "pass";	//Contraseña de Google para enviar correos
+    	final String username = "user";	//Usuario de Google para enviar correos
+    	final String password = "pass";	//Contraseña de Google para enviar correos
         Properties prop = new Properties();
 		prop.put("mail.smtp.host", "smtp.gmail.com");
         prop.put("mail.smtp.port", "587");				//Configuracion del Host de Gmail
