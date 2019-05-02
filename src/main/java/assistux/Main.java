@@ -70,6 +70,7 @@ public class Main extends JFrame {
 		btnOk.addActionListener(new ActionListener() {	//Al dar clic a "ok"..
 			public void actionPerformed(ActionEvent e) {
 				String texto = txtInput.getText();	//toma el string ingresado por el usuario
+				texto = texto.trim();//trim recorta espacios al inicio y final
 				JTextField inpt = Texto.getInput(texto);	//lo manda a la funcion getInput de la clase Texto para analizarlo
 				contentPane.add(inpt);	//se coloca la respuesta obtenida por la funcion
 				JTextField uinpt = Texto.printUserInput(texto); //imprime el texto del usuario

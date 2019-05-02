@@ -22,17 +22,26 @@ public class Texto {
 					c.colocarBotonEnvio();
 					espacio = c.getEspacio();
 				}else {
-					String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
-					if(!txt.equals("")){	// si tiene numeros
-						Matematicas m = new Matematicas(texto, espacio);
-						inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
-						inpt.setBounds(10, espacio, 150, 20);
+					if(variacionesBusqueda(texto)) {
+						Busqueda.buscar(texto);
+						inpt.setText("Aqui tiene los resultados");
+						inpt.setEditable(false);
+						inpt.setBounds(10, espacio, 200, 20);
 						espacio-=30;
-					}else {
-							inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
-							inpt.setEditable(false);
+					}
+					else {
+						String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
+						if(!txt.equals("")){	// si tiene numeros
+							Matematicas m = new Matematicas(texto, espacio);
+							inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
 							inpt.setBounds(10, espacio, 150, 20);
 							espacio-=30;
+						}else {
+								inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
+								inpt.setEditable(false);
+								inpt.setBounds(10, espacio, 150, 20);
+								espacio-=30;
+							}
 						}
 					}
 				}
@@ -40,17 +49,38 @@ public class Texto {
 		} // fin metodo getInput
 		
 		/*METODOS PARA LAS VARIACIONES DE PALABRAS*/
+		//Variaciones de correo
 		public static boolean variacionesCorreo(String texto) {
 			String[] vCorreo = {"enviar", "mandar", "remitir", "expedir", "emitir",
 								"envia", "manda", "remite", "expide", "emite"};	//Arreglo de Strings con variaciones para pedir un envio de correo
 			for(int i=0; i < vCorreo.length; i++) {
-				if(texto.equalsIgnoreCase(vCorreo[i]+" correo") ||
-				   texto.equalsIgnoreCase(vCorreo[i]+" un correo")) {
+				if(texto.equalsIgnoreCase(vCorreo[i]+" correo")	   ||
+				   texto.equalsIgnoreCase(vCorreo[i]+" un correo") ||
+				   texto.equalsIgnoreCase(vCorreo[i]+" email") 	   ||
+				   texto.equalsIgnoreCase(vCorreo[i]+" un email")  ||
+				   texto.equalsIgnoreCase(vCorreo[i]+" mail") 	   ||
+				   texto.equalsIgnoreCase(vCorreo[i]+" un mail")  ) {
 					return true;
 				}
 			}
 			return false;
-		}
+		}//Fin variaciones de correo
+		
+		//variaciones para busqueda
+		public static boolean variacionesBusqueda(String texto) {
+			String[] vBuscar = {"busca", "investiga", "busqueda", "indaga",
+								"buscar", "investigar", "indagar"};
+			String[] textoSeparado = texto.split(" ");	//separa el String por palabras
+			for(int i=0; i < vBuscar.length; i++) {
+			if(textoSeparado[0].equalsIgnoreCase(vBuscar[i]) 	  ||
+					(textoSeparado[0].equalsIgnoreCase(vBuscar[i])&& 
+					textoSeparado[1].equalsIgnoreCase("en") 	  && 
+					textoSeparado[2].equalsIgnoreCase("google")   ||
+					textoSeparado[2].equalsIgnoreCase("internet")) )
+				return true;	//si tiene cualquiera de las opciones de busqueda regresa verdadero
+			}
+			return false;
+		}//fin variaciones para busqueda
 		
 		//Metodo para imprimir el input del usuario
 		public static JTextField printUserInput(String texto) {
