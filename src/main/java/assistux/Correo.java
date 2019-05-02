@@ -96,7 +96,7 @@ public class Correo {
     	/*CUALQUIER CUENTA DE GOOGLE USADA DEBE TENER HABILITADO EN OPCIONES DE SEGUIRDAD "Acceso de aplicaciones poco seguras"*/
     	
     	final String username = "user";	//Usuario de Google para enviar correos
-    	final String password = "pass";	//Contraseña de Google para enviar correos
+    	final String password = "password";	//Contraseña de Google para enviar correos
         Properties prop = new Properties();
 		prop.put("mail.smtp.host", "smtp.gmail.com");
         prop.put("mail.smtp.port", "587");				//Configuracion del Host de Gmail
@@ -120,10 +120,16 @@ public class Correo {
                     InternetAddress.parse(para.getText())	//Coloca los correos separados con comas
             );
             message.setSubject(asunto.getText());
-            message.setText(mensaje.getText() 
-            				+ "\n\n\n"
-            				+ "Este correo fue enviado por el asistente digital de codigo libre Assistux:\n"	//auto-promocion xd
-            				+ "https://github.com/vandelvan/Assistux");
+            String msg = mensaje.getText() 
+            				+ "<br><br><br><br><br><br><hr>"
+            				+ "<div style='margin-left:25%'>"
+            				+ "Este correo fue enviado por el asistente digital de codigo libre Assistux:<br>"	//auto-promocion xd
+            				+ "<a style='margin-left:20%' href='https://github.com/vandelvan/Assistux'>"
+            				+ "<img width ='20%' heigth ='22%' src='https://github.com/vandelvan/Assistux/blob/master/src/main/java/icon/assistux.png?raw=true'></img>"
+            				+ "</a>"
+            				+ "</div>";
+            message.setContent(msg, "text/html");
+            				
 
             Transport.send(message);
 
