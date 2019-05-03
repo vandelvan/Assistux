@@ -5,9 +5,13 @@ import java.util.Random;
 import javax.swing.JTextField;
 
 public class Chistes {
+	private int espacio = 0;
 	
-	public JTextField mostrarChiste() {
-		JTextField inpt =  new JTextField();
+	public Chistes(int espacio) {
+		this.espacio = espacio;
+	}
+	
+	public void mostrarChiste() {
 		
 		Random rand = new Random();
 
@@ -15,276 +19,303 @@ public class Chistes {
 		
 		if(nChistes == 1) 
 		{
-			inpt = chiste1();
+			chiste1();
 		}
 		if(nChistes == 2) 
 		{
-			inpt = chiste2();
+			chiste2();
 		}
 		if(nChistes == 3) 
 		{
-			inpt = chiste3();
+			chiste3();
 		}
 		if(nChistes == 4) 
 		{
-			inpt = chiste4();
+			chiste4();
 		}
 		if(nChistes == 5) 
 		{
-			inpt = chiste5();
+			chiste5();
 		}
 		if(nChistes == 6) 
 		{
-			inpt = chiste6();
+			chiste6();
 		}
 		if(nChistes == 7) 
 		{
-			inpt = chiste7();
+			chiste7();
 		}
 		if(nChistes == 8) 
 		{
-			inpt = chiste8();
+			chiste8();
 		}
 		if(nChistes == 9) 
 		{
-			inpt = chiste9();
+			chiste9();
 		}
 		if(nChistes == 10) 
 		{
-			inpt = chiste10();
+			chiste10();
 		}
 		if(nChistes == 11) 
 		{
-			inpt = chiste11();
+			chiste11();
 		}
 		if(nChistes == 12) 
 		{
-			inpt = chiste12();
+			chiste12();
 		}
 		if(nChistes == 13) 
 		{
-			inpt = chiste13();
+			chiste13();
 		}
 		if(nChistes == 14) 
 		{
-			inpt = chiste14();
+			chiste14();
 		}
 		if(nChistes == 15) 
 		{
-			inpt = chiste15();
+			chiste15();
 		}
 		if(nChistes == 16) 
 		{
-			inpt = chiste16();
+			chiste16();
 		}
 		if(nChistes == 17) 
 		{
-			inpt = chiste17();
+			chiste17();
 		}
 		if(nChistes == 18) 
 		{
-			inpt = chiste18();
+			chiste18();
 		}
 		if(nChistes == 19) 
 		{
-			inpt = chiste19();
+			chiste19();
 		}
 		if(nChistes == 20) 
 		{
-			inpt = chiste20();
+			chiste20();
 		}
 		if(nChistes == 21) 
 		{
-			inpt = chiste21();
+			chiste21();
 		}
 		if(nChistes == 22) 
 		{
-			inpt = chiste22();
+			chiste22();
 		}
 		if(nChistes == 23) 
 		{
-			inpt = chiste23();
+			chiste23();
 		}
 		if(nChistes == 24) 
 		{
-			inpt = chiste24();
+			chiste24();
 		}
-		return inpt;
 	}
 	
-	public JTextField chiste1() {
+	public void chiste1() {
 		JTextField inpt = new JTextField();
-		inpt.setText("El sargento ordena: Fuego a discreción, y discreción murió acribillado");
+		inpt.setText("El sargento ordena: Fuego a discreciï¿½n, y discreciï¿½n muriï¿½ acribillado");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste2() {
+	public void chiste2() {
 		JTextField inpt = new JTextField();
-		inpt.setText("Un ciego le pregunta a un cojo: ¿Qué tal andas? Y el cojo le contesta: Pues ya ves.");
+		inpt.setText("Un ciego le pregunta a un cojo: ï¿½Quï¿½ tal andas? Y el cojo le contesta: Pues ya ves.");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste3() {
+	public void chiste3() {
 		JTextField inpt = new JTextField();
-		inpt.setText("Era un cocinero tan feo, pero tan feo, que hacía llorar a las cebollas.");
+		inpt.setText("Era un cocinero tan feo, pero tan feo, que hacï¿½a llorar a las cebollas.");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste4() {
+	public void chiste4() {
 		JTextField inpt = new JTextField();
-		inpt.setText("Tony muere al final de Endgame");
+		inpt.setText("Tony muere al final de Endgame");	//no es un chiste
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste5() {
+	public void chiste5() {
 		JTextField inpt = new JTextField();
-		inpt.setText("Como murió el hombre que inventó la cama de piedra? - de un almohadazo!");
+		inpt.setText("Como muriï¿½ el hombre que inventï¿½ la cama de piedra? - de un almohadazo!");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste6() {
+	public void chiste6() {
 		JTextField inpt = new JTextField();
 		inpt.setText("Si te miras en un espejo encuentras un mejor chiste que los que yo cuento.");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste7() {
+	public void chiste7() {
 		JTextField inpt = new JTextField();
 		inpt.setText("Un judio le dice a otro: la marea sube. Comprala, comprala responde el otro");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste8() {
+	public void chiste8() {
 		JTextField inpt = new JTextField();
-		inpt.setText("¿Porque se cayó el mono del árbol?, porque estaba muerto.");
+		inpt.setText("ï¿½Porque se cayï¿½ el mono del ï¿½rbol?, porque estaba muerto.");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste9() {
+	public void chiste9() {
 		JTextField inpt = new JTextField();
 		inpt.setText("Erase una vez un percebe muy feo, era tan feo que todos murieron, fin.");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste10() {
+	public void chiste10() {
 		JTextField inpt = new JTextField();
-		inpt.setText("¿Que pasa si cruzas una jirafa con un humano?, no pasa nada, porque los dos son genéticamente incompatibles.");
+		inpt.setText("ï¿½Que pasa si cruzas una jirafa con un humano?, no pasa nada, porque los dos son genï¿½ticamente incompatibles.");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste11() {
+	public void chiste11() {
 		JTextField inpt = new JTextField();
-		inpt.setText("¿Cómo se llama el primo vegetariano de Bruce Lee? Pues, Broco Lee.");
+		inpt.setText("ï¿½Cï¿½mo se llama el primo vegetariano de Bruce Lee? Pues, Broco Lee.");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste12() {
+	public void chiste12() {
 		JTextField inpt = new JTextField();
-		inpt.setText("¿Cómo se llama el primo vegetariano de Bruce Lee? Pues, Broco Lee.");
+		inpt.setText("ï¿½Cï¿½mo se llama el primo vegetariano de Bruce Lee? Pues, Broco Lee.");	//repetido
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste13() {
+	public void chiste13() {
 		JTextField inpt = new JTextField();
-		inpt.setText("¿Cómo se ríe un ojo? !Ojojojojojojo!.");
+		inpt.setText("ï¿½Cï¿½mo se rï¿½e un ojo? !Ojojojojojojo!.");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste14() {
+	public void chiste14() {
 		JTextField inpt = new JTextField();
-		inpt.setText("Los matemáticos no orinan, hacen Pi Pi.");
+		inpt.setText("Los matemï¿½ticos no orinan, hacen Pi Pi.");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste15() {
+	public void chiste15() {
 		JTextField inpt = new JTextField();
-		inpt.setText("Eyaculador precoz busca mujer para... bueno, ya da igual..");
+		inpt.setText("Eyaculador precoz busca mujer para... bueno, ya da igual..");	//no da risa
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste16() {
+	public void chiste16() {
 		JTextField inpt = new JTextField();
-		inpt.setText("¿Qué le dice un pez a otro? Nada");
+		inpt.setText("ï¿½Quï¿½ le dice un pez a otro? Nada");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste17() {
+	public void chiste17() {
 		JTextField inpt = new JTextField();
-		inpt.setText("¿De dónde viene la lana virgen?... De las ovejas feas");
+		inpt.setText("ï¿½De dï¿½nde viene la lana virgen?... De las ovejas feas");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste18() {
+	public void chiste18() {
 		JTextField inpt = new JTextField();
-		inpt.setText("- Eres un fanático de la computación, ¿cierto?.\r\n" + 
+		inpt.setText("- Eres un fanï¿½tico de la computaciï¿½n, ï¿½cierto?.\r\n" + 
 				"- Si... mouse o menos.");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste19() {
+	public void chiste19() {
 		JTextField inpt = new JTextField();
-		inpt.setText("¿Qué se dijo una cereza al verse en un espejo?\r\n" + 
+		inpt.setText("ï¿½Quï¿½ se dijo una cereza al verse en un espejo?\r\n" + 
 				"\r\n" + 
-				"¿Sere eza yo?");
+				"ï¿½Sere eza yo?");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste20() {
+	public void chiste20() {
 		JTextField inpt = new JTextField();
-		inpt.setText("¿Cuál es la fórmula química del agua bendita?\r\n" + 
+		inpt.setText("ï¿½Cuï¿½l es la fï¿½rmula quï¿½mica del agua bendita?\r\n" + 
 				"H-DIOS-O");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste21() {
+	public void chiste21() {
 		JTextField inpt = new JTextField();
-		inpt.setText("¿Cómo se despiden dos químicos?\r\n" + 
-				"Ácido un placer.1");
+		inpt.setText("ï¿½Cï¿½mo se despiden dos quï¿½micos?\r\n" + 
+				"ï¿½cido un placer.1");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste22() {
+	public void chiste22() {
 		JTextField inpt = new JTextField();
-		inpt.setText("Tus chistes de química son muy malos. Lo sodio.");
+		inpt.setText("Tus chistes de quï¿½mica son muy malos. Lo sodio.");	//10/10
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste23() {
+	public void chiste23() {
 		JTextField inpt = new JTextField();
 		inpt.setText("Oye, tu estudias derecho? No, yo estudio sentado");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
 	}
-	public JTextField chiste24() {
+	public void chiste24() {
 		JTextField inpt = new JTextField();
 		inpt.setText("-Donde pone cervantes el detergente?"
-					+ "En algún lugar de la mancha");
+					+ "En algï¿½n lugar de la mancha");
 		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
-		return inpt;
+	}
+	
+	public int getEspacio() {
+		return espacio;
 	}
 		
 		

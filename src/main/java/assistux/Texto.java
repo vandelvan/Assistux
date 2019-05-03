@@ -35,17 +35,11 @@ public class Texto {
 							espacio = cal.getEspacio();
 						}else {
 							
-							if(vChistes(texto)) 
-							{
-								
-								Chistes c = new Chistes();
-								inpt = c.mostrarChiste();
-								inpt.setBounds(10, espacio, 200, 20);
-								espacio-=30;
-								
-							} 
-							else {
-							
+							if(vChistes(texto)){
+								Chistes c = new Chistes(espacio);
+								c.mostrarChiste();
+								espacio = c.getEspacio();
+							}else {
 								String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
 								if(!txt.equals("")){	// si tiene numeros
 									Matematicas m = new Matematicas(texto, espacio);
