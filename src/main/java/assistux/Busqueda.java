@@ -32,7 +32,9 @@ public class Busqueda {
             Desktop desktop = Desktop.getDesktop();
             try {
                 desktop.browse(new URI(url));
-            } catch (IOException | URISyntaxException e) {
+            } catch (IOException e) {
+                e.printStackTrace();
+            }catch (URISyntaxException e) {
                 e.printStackTrace();
             }
         }else{	//PARA ABRIR EL EXPLORADOR EN SISTEMAS UNIX

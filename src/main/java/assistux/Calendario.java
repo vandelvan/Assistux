@@ -123,7 +123,11 @@ public class Calendario {
 					horaFin.setEditable(false);
 					try {
 						nuevoEvento();
-					} catch (IOException | GeneralSecurityException | ParseException e1) {
+					} catch (IOException e1) {
+						e1.printStackTrace();
+					}catch (GeneralSecurityException e1) {
+						e1.printStackTrace();
+					}catch (ParseException e1) {
 						e1.printStackTrace();
 					}
 				}else {
