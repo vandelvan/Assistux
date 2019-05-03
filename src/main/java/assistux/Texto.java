@@ -12,7 +12,7 @@ public class Texto {
 		public static JTextField getInput(String texto){
 			JTextField inpt = new JTextField();
 			if(texto.equalsIgnoreCase("algo")) {	//Si el texto es "algo" (literalmente)
-				inpt.setText("Qué gracioso xd");	//Respuesta ironica
+				inpt.setText("Que gracioso xd");	//Respuesta ironica
 				inpt.setEditable(false);			//No es editable por el usuario
 				 inpt.setBounds(10, espacio, 200, 20);	//espacio es definido anteriormente para colocar los outputs en un alto que no se sobreponga
 				 espacio-=30;	//disminuye el alto para el siguiente dialogo
@@ -34,17 +34,30 @@ public class Texto {
 							cal.colocarBotonEvento();
 							espacio = cal.getEspacio();
 						}else {
-							String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
-							if(!txt.equals("")){	// si tiene numeros
-								Matematicas m = new Matematicas(texto, espacio);
-								inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
-								inpt.setBounds(10, espacio, 150, 20);
+							
+							if(vChistes(texto)) 
+							{
+								
+								Chistes c = new Chistes();
+								inpt = c.mostrarChiste();
+								inpt.setBounds(10, espacio, 200, 20);
 								espacio-=30;
-							}else {
-									inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
-									inpt.setEditable(false);
+								
+							} 
+							else {
+							
+								String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
+								if(!txt.equals("")){	// si tiene numeros
+									Matematicas m = new Matematicas(texto, espacio);
+									inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
 									inpt.setBounds(10, espacio, 150, 20);
 									espacio-=30;
+								}else {
+										inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
+										inpt.setEditable(false);
+										inpt.setBounds(10, espacio, 150, 20);
+										espacio-=30;
+									}
 								}
 							}
 						}
@@ -95,6 +108,23 @@ public class Texto {
 						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
 			}
 			return false;
+		}
+		
+		public static boolean vChistes(String texto) {
+			String[] vChistes = {"cuenta", "cuentame", "dime", "dame", "chiste", "contar", "cuenta",
+					"decime", "escribe", "escribeme"};
+				for(int i = 0; i < vChistes.length; i++) {
+						if(texto.equalsIgnoreCase(vChistes[i] + " un chiste")		||
+							texto.equalsIgnoreCase(vChistes[i] + " chiste")			||
+							texto.equalsIgnoreCase(vChistes[i] + " una broma")		||
+							texto.equalsIgnoreCase(vChistes[i] + " otra broma")		||
+							texto.equalsIgnoreCase(vChistes[i] + " otro chiste")	||
+							texto.equalsIgnoreCase(vChistes[i] + " algo gracioso")	)
+			return true; //si tiene cualquiera de las opciones para contar un chiste regresa verdadero
+}
+return false;
+			
+			
 		}
 		
 		//Metodo para imprimir el input del usuario
