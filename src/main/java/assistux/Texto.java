@@ -28,19 +28,24 @@ public class Texto {
 						inpt.setEditable(false);
 						inpt.setBounds(10, espacio, 200, 20);
 						espacio-=30;
-					}
-					else {
-						String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
-						if(!txt.equals("")){	// si tiene numeros
-							Matematicas m = new Matematicas(texto, espacio);
-							inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
-							inpt.setBounds(10, espacio, 150, 20);
-							espacio-=30;
+					}else {
+						if(variacionesEvento(texto)) {
+							Calendario cal = new Calendario(espacio);
+							cal.colocarBotonEvento();
+							espacio = cal.getEspacio();
 						}else {
-								inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
-								inpt.setEditable(false);
+							String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
+							if(!txt.equals("")){	// si tiene numeros
+								Matematicas m = new Matematicas(texto, espacio);
+								inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
 								inpt.setBounds(10, espacio, 150, 20);
 								espacio-=30;
+							}else {
+									inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
+									inpt.setEditable(false);
+									inpt.setBounds(10, espacio, 150, 20);
+									espacio-=30;
+								}
 							}
 						}
 					}
@@ -60,7 +65,7 @@ public class Texto {
 				   texto.equalsIgnoreCase(vCorreo[i]+" un email")  ||
 				   texto.equalsIgnoreCase(vCorreo[i]+" mail") 	   ||
 				   texto.equalsIgnoreCase(vCorreo[i]+" un mail")  ) {
-					return true;
+						return true;
 				}
 			}
 			return false;
@@ -72,15 +77,25 @@ public class Texto {
 								"buscar", "investigar", "indagar"};
 			String[] textoSeparado = texto.split(" ");	//separa el String por palabras
 			for(int i=0; i < vBuscar.length; i++) {
-			if(textoSeparado[0].equalsIgnoreCase(vBuscar[i]) 	  ||
-					(textoSeparado[0].equalsIgnoreCase(vBuscar[i])&& 
-					textoSeparado[1].equalsIgnoreCase("en") 	  && 
-					textoSeparado[2].equalsIgnoreCase("google")   ||
-					textoSeparado[2].equalsIgnoreCase("internet")) )
-				return true;	//si tiene cualquiera de las opciones de busqueda regresa verdadero
+			if(textoSeparado[0].equalsIgnoreCase(vBuscar[i]))
+						return true;	//si tiene cualquiera de las opciones de busqueda regresa verdadero
 			}
 			return false;
 		}//fin variaciones para busqueda
+		
+		//variaciones de calendario/evento
+		public static boolean variacionesEvento(String texto) {
+			String[] vEvento = {"crear", "hacer", "agendar", "reservar", "apartar", "programar", "realizar",
+								"crea", "haz", "agenda", "reserva", "aparta", "programa", "realiza"};
+			for(int i = 0; i < vEvento.length; i++) {
+				if(texto.equalsIgnoreCase(vEvento[i] + " evento")		||
+					texto.equalsIgnoreCase(vEvento[i] + " un evento")	||
+					texto.equalsIgnoreCase(vEvento[i] + " cita")		||
+					texto.equalsIgnoreCase(vEvento[i] + " una cita")	)
+						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
+			}
+			return false;
+		}
 		
 		//Metodo para imprimir el input del usuario
 		public static JTextField printUserInput(String texto) {
