@@ -121,12 +121,72 @@ return false;
 			
 		}
 		
+		public static void bienvenida() {
+			
+			
+			JTextField inpt= new JTextField();
+			inpt.setText("Y entretenerte");		
+			inpt.setBounds(10, espacio, 200, 20);
+			inpt.setEditable(false);
+			espacio -= 30;
+			Main.contentPane.add(inpt);
+			
+			JTextField inpt0 = new JTextField();
+			inpt0.setText("Agendar eventos");		
+			inpt0.setBounds(10, espacio, 200, 20);
+			inpt0.setEditable(false);
+			espacio -= 30;
+			Main.contentPane.add(inpt0);
+			
+			JTextField inpt1 = new JTextField();
+			inpt1.setText("Realizar operaciones matemáticas");		
+			inpt1.setBounds(10, espacio, 200, 20);
+			inpt1.setEditable(false);
+			espacio -= 30;
+			Main.contentPane.add(inpt1);
+			
+			JTextField inpt2 = new JTextField();
+			inpt2.setText("Enviar correos");	
+			inpt2.setBounds(10, espacio, 200, 20);
+			inpt2.setEditable(false);
+			espacio -= 30;
+			Main.contentPane.add(inpt2);
+			
+			JTextField inpt3 = new JTextField();
+			inpt3.setText("Puedo realizar multiples tareas");	
+			inpt3.setBounds(10, espacio, 200, 20);
+			inpt3.setEditable(false);
+			espacio -= 30;
+			Main.contentPane.add(inpt3);
+			
+			JTextField inpt4 = new JTextField();
+			inpt4.setText("Seré tu asistente");	
+			inpt4.setBounds(10, espacio, 200, 20);
+			inpt4.setEditable(false);
+			espacio -= 30;
+			Main.contentPane.add(inpt4);
+			
+			JTextField inpt5 = new JTextField();
+			inpt5.setText("Soy Assistux");	
+			inpt5.setBounds(10, espacio, 200, 20);
+			inpt5.setEditable(false);
+			espacio -= 30;
+			Main.contentPane.add(inpt5);
+			
+			JTextField inpt6 = new JTextField();
+			inpt6.setText("Bienvenido usuario!");
+			inpt6.setBounds(10, espacio, 200, 20);
+			inpt6.setEditable(false);
+			espacio -= 30;
+			Main.contentPane.add(inpt6);
+		}
+		
 		//Metodo para imprimir el input del usuario
 		public static JTextField printUserInput(String texto) {
 			JTextField uinpt = new JTextField();
 			uinpt.setText(texto);
 			uinpt.setEditable(false);
-			int ub = ubicacion(texto);	//cambia el tamaño del dialogo dependiendo de lo largo que sea el input
+			int ub = ubicacion(texto);	//cambia el tamaÃ±o del dialogo dependiendo de lo largo que sea el input
 			int an = ancho(texto);
 			uinpt.setBounds(ub, espacio, an, 20);
 			espacio-=30;

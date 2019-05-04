@@ -44,14 +44,14 @@ public class Main extends JFrame {
 	 * Create the frame.
 	 */
 	public Main() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("/icon/assistux_o16_icon.ico"))); //Se asigna el icono
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("/icon/assistux.png"))); //Se asigna el icono
 		setBackground(UIManager.getColor("ScrollBar.trackHighlightForeground"));
 		setTitle("Assistux");	//se pone el titulo del frame
 		setResizable(false);	//no se puede redimensionar
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 300, 330, 600);	//tamaño y ubicacion
 		contentPane = new JScrollPane();
-		contentPane.setBackground(new Color(0, 0, 0));
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -81,10 +81,11 @@ public class Main extends JFrame {
 		btnOk.setBounds(240, 520, 53, 29);
 		contentPane.add(btnOk);
 		
-		Dimension tamanioPane = contentPane.getSize();
-		Point p = new Point(
-		   0,
-		   tamanioPane.height);
-		contentPane.getViewport().setViewPosition(p);
+		//Dimension tamanioPane = contentPane.getSize();
+		//Point p = new Point(
+		  // 0,
+		   //tamanioPane.height);
+		//contentPane.getViewport().setViewPosition(p);
+		Texto.bienvenida();
 	}
 }
