@@ -205,4 +205,13 @@ return false;
 			ancho += 6*texto.length();
 			return ancho;
 		}
+		
+		public static void vez() {	//funcion que verifica si el tamaño en pantalla se ha excedido por los dialogos
+			if(espacio < 0) {
+				espacio = 480;	//reinicia el espacio
+				Main.frame.dispose();	//cierra el frame
+				Main.main(null);	//reinicia el frame
+				Main.primerVez = false;	//pone primerVez en falso para que no mueste el mensaje de bienvenida otra vez
+			}
+		}
 }

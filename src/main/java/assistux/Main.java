@@ -1,19 +1,25 @@
 package assistux;
 import java.awt.EventQueue;
 import java.awt.Font;
-import java.awt.Point;
+import java.awt.Graphics;
+import java.awt.Image;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
+
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import javax.swing.JScrollPane;
 
 public class Main extends JFrame {
 
@@ -21,9 +27,10 @@ public class Main extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	static JScrollPane contentPane;
+	static JPanel contentPane;
 	private JTextField txtInput;
-
+	static boolean primerVez = true;
+	static Main frame;
 	/**
 	 * Launch the application.
 	 */
@@ -31,7 +38,7 @@ public class Main extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Main frame = new Main();
+					frame = new Main();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,18 +50,32 @@ public class Main extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Main() {
+	public Main(){
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("/icon/assistux.png"))); //Se asigna el icono
 		setBackground(UIManager.getColor("ScrollBar.trackHighlightForeground"));
 		setTitle("Assistux");	//se pone el titulo del frame
 		setResizable(false);	//no se puede redimensionar
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(0, 300, 330, 600);	//tamaño y ubicacion
-		contentPane = new JScrollPane();
-		contentPane.setBackground(Color.WHITE);
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		int posX = (int) (screenSize.getWidth()*.01);
+		int posY = (int) (screenSize.getHeight()*.2);	//posiciona el JFrame dependiendo del tamaño de la pantalla
+		setBounds(posX, posY, 330, 600);	//tamaño y ubicacion
+		try {
+		    final Image backgroundImage = ImageIO.read(new File("src/main/java/icon/Fondo.png"));//coloca el fondo del programa
+		    contentPane = new JPanel(new BorderLayout()) {
+				private static final long serialVersionUID = 1L;
+
+				@Override 
+		        public void paintComponent(Graphics g) {
+		            g.drawImage(backgroundImage, 0, 0, null);
+		        }
+		    };
+		} catch (IOException e) {
+		    throw new RuntimeException(e);
+		}
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		setContentPane(contentPane);
 		
 		txtInput = new JTextField(10);	//se crea el input
 		txtInput.setText("");
@@ -76,16 +97,12 @@ public class Main extends JFrame {
 				JTextField uinpt = Texto.printUserInput(texto); //imprime el texto del usuario
 				contentPane.add(uinpt);
 				txtInput.setText(""); //resetea el input
+				Texto.vez();
 			}
 		});
 		btnOk.setBounds(240, 520, 53, 29);
 		contentPane.add(btnOk);
-		
-		//Dimension tamanioPane = contentPane.getSize();
-		//Point p = new Point(
-		  // 0,
-		   //tamanioPane.height);
-		//contentPane.getViewport().setViewPosition(p);
-		Texto.bienvenida();
+		if(primerVez)
+			Texto.bienvenida();
 	}
 }
