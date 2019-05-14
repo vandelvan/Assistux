@@ -39,7 +39,26 @@ public class Texto {
 								Chistes c = new Chistes(espacio);
 								c.mostrarChiste();
 								espacio = c.getEspacio();
+								
 							}else {
+								if(vDatos(texto)){
+									Datos d = new Datos(espacio);
+									d.getDato();
+									espacio = d.getEspacio();
+								}
+								else {
+									if(vAmor(texto)){
+										Amor a = new Amor(espacio);
+										a.MeAma();
+										espacio = a.getEspacio();
+										}
+									else {
+										if(vHola(texto)){
+											Hola h = new Hola(espacio);
+											h.saludo();
+											espacio = h.getEspacio();
+											}
+										else {
 								String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
 								if(!txt.equals("")){	// si tiene numeros
 									Matematicas m = new Matematicas(texto, espacio);
@@ -51,12 +70,15 @@ public class Texto {
 										inpt.setEditable(false);
 										inpt.setBounds(10, espacio, 150, 20);
 										espacio-=30;
-									}
+											}
+										}
+									}	
 								}
 							}
 						}
 					}
-				}
+				} 
+			}
 			return inpt;	//regresa el dialogo para colocarse
 		} // fin metodo getInput
 		
@@ -104,6 +126,8 @@ public class Texto {
 			return false;
 		}
 		
+		
+		
 		public static boolean vChistes(String texto) {
 			String[] vChistes = {"cuenta", "cuentame", "dime", "dame", "chiste", "contar", "cuenta",
 					"decime", "escribe", "escribeme"};
@@ -119,6 +143,43 @@ public class Texto {
 return false;
 			
 			
+		}
+
+		public static boolean vAmor(String texto) {
+			String[] vAmor = {"te", "me"};
+				for(int i = 0; i < vAmor.length; i++) {
+						if(texto.equalsIgnoreCase(vAmor[i] + " amo")		||
+							texto.equalsIgnoreCase(vAmor[i] + " amas")		||
+							texto.equalsIgnoreCase(vAmor[i] + " amas?"))
+			return true; //si tiene cualquiera de las opciones para contar un chiste regresa verdadero
+}
+return false;
+		}
+		
+		public static boolean vDatos(String texto) {
+			String[] vDatos = {"dime", "dame", "cuentame", "dato", "un dato","dime un"};
+			for(int i = 0; i < vDatos.length; i++) {
+				if(texto.equalsIgnoreCase(vDatos[i] + " un dato")		||
+					texto.equalsIgnoreCase(vDatos[i] + " un dato curioso")	||
+					texto.equalsIgnoreCase(vDatos[i] + " curioso")		||
+					texto.equalsIgnoreCase(vDatos[i] + " curiosidad")		||
+					texto.equalsIgnoreCase(vDatos[i] + " una curiosidad")		||
+					texto.equalsIgnoreCase(vDatos[i] + " dato"))
+						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
+			}
+			return false;
+		}
+		
+		public static boolean vHola(String texto) {
+			String[] vHola = {"Hey", "Hola", "que"};
+			for(int i = 0; i < vHola.length; i++) {
+				if(texto.equalsIgnoreCase(vHola[i] + " asistux")		||
+					texto.equalsIgnoreCase(vHola[i] + " karen")	||
+					texto.equalsIgnoreCase(vHola[i] + "")	||
+					texto.equalsIgnoreCase(vHola[i] + " onda"))
+						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
+			}
+			return false;
 		}
 		
 		public static void bienvenida() {

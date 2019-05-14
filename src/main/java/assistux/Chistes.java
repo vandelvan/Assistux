@@ -409,31 +409,32 @@ public class Chistes {
 	}
 	public void chiste18() {
 		JTextField inpt2 = new JTextField();
-		inpt2.setText("- Eres un fanatico de la computacion, cierto?");
+		inpt2.setText("- Si... mouse o menos.");
 		inpt2.setEditable(false);	//crea el dialogo
 		inpt2.setBounds(10, espacio, 200, 30);
 		espacio-=30;
 		JTextField inpt = new JTextField();
-		inpt.setText("- Si... mouse o menos.");
+		inpt.setText("-Eres un fanatico de la computacion?");
 		inpt.setEditable(false);	//crea el dialogo
 		inpt.setBounds(10, espacio, 200, 30);
 		espacio-=30;
-		Main.contentPane.add(inpt);	//lo coloca
-		Main.contentPane.add(inpt2);
+		Main.contentPane.add(inpt2);	//lo coloca
+		Main.contentPane.add(inpt);
 	}
 	public void chiste19() {
 		JTextField inpt2 = new JTextField();
-		inpt2.setText("-Que se dijo una cereza al verse en un espejo?\r\n");
+		inpt2.setText("-Sere eza yo?");
 		inpt2.setEditable(false);	//crea el dialogo
 		inpt2.setBounds(10, espacio, 200, 30);
 		espacio-=30;
 		JTextField inpt = new JTextField();
-		inpt.setText("-Sere eza yo?");
+		inpt.setText("-Que se dijo una cereza al verse en un espejo?");
 		inpt.setEditable(false);	//crea el dialogo
 		inpt.setBounds(10, espacio, 200, 30);
 		espacio-=30;
-		Main.contentPane.add(inpt);	//lo coloca
-		Main.contentPane.add(inpt2);
+		Main.contentPane.add(inpt);
+		Main.contentPane.add(inpt2);	//lo coloca
+		
 	}
 	public void chiste20() {
 		JTextField inpt2 = new JTextField();
@@ -456,7 +457,7 @@ public class Chistes {
 		inpt2.setBounds(10, espacio, 200, 30);
 		espacio-=30;
 		JTextField inpt = new JTextField();
-		inpt.setText("ï¿Como se despiden dos quimicos?\r\n");
+		inpt.setText("¿Como se despiden dos quimicos?\r\n");
 		inpt.setEditable(false);	//crea el dialogo
 		inpt.setBounds(10, espacio, 200, 30);
 		espacio-=30;
