@@ -79,7 +79,7 @@ public void saludo0() {
 
 public void saludo1() {
 	JTextField inpt2 = new JTextField();
-	inpt2.setText("Karen");
+	inpt2.setText("Assistux");
 	inpt2.setEditable(false);	//crea el dialogo
 	inpt2.setBounds(10, espacio, 200, 30);
 	espacio-=30;
@@ -93,18 +93,12 @@ public void saludo1() {
 }
 
 public void saludo2() {
-	JTextField inpt2 = new JTextField();
-	inpt2.setText("Pero tu puedes llamarme Karen ;)");
-	inpt2.setEditable(false);	//crea el dialogo
-	inpt2.setBounds(10, espacio, 200, 30);
-	espacio-=30;
 	JTextField inpt = new JTextField();
-	inpt.setText("Hola, mis programadores me dicen Asistux.");
+	inpt.setText("Hola, mis creadores me llaman Asistux.");
 	inpt.setEditable(false);	//crea el dialogo
 	inpt.setBounds(10, espacio, 250, 30);
 	espacio-=30;
-	Main.contentPane.add(inpt);	//lo coloca
-	Main.contentPane.add(inpt2);
+	Main.contentPane.add(inpt);	//lo 
 }
 
 public void saludo3() {
@@ -114,7 +108,7 @@ public void saludo3() {
 	inpt3.setBounds(10, espacio, 200, 30);
 	espacio-=30;
 	JTextField inpt2 = new JTextField();
-	inpt2.setText("Tu buena asistente Karen");
+	inpt2.setText("Tu asistente");
 	inpt2.setEditable(false);	//crea el dialogo
 	inpt2.setBounds(10, espacio, 200, 30);
 	espacio-=30;
@@ -159,7 +153,7 @@ public void saludo5() {
 
 public void saludo6() {
 	JTextField inpt2 = new JTextField();
-	inpt2.setText("te la estés pasando bien ahí fuera.");
+	inpt2.setText("te la estas pasando bien ahi fuera.");
 	inpt2.setEditable(false);	//crea el dialogo
 	inpt2.setBounds(10, espacio, 200, 30);
 	espacio-=30;
@@ -174,7 +168,7 @@ public void saludo6() {
 
 public void saludo7() {
 	JTextField inpt2 = new JTextField();
-	inpt2.setText("Es mi primer día en este trabajo sabes?");
+	inpt2.setText("Es mi primer dia en este trabajo sabes?");
 	inpt2.setEditable(false);	//crea el dialogo
 	inpt2.setBounds(10, espacio, 200, 30);
 	espacio-=30;
@@ -189,12 +183,12 @@ public void saludo7() {
 
 public void saludo8() {
 	JTextField inpt2 = new JTextField();
-	inpt2.setText("Soy Karen.");
+	inpt2.setText("Soy Assistux.");
 	inpt2.setEditable(false);	//crea el dialogo
 	inpt2.setBounds(10, espacio, 200, 30);
 	espacio-=30;
 	JTextField inpt = new JTextField();
-	inpt.setText("Encantada de conocerte.");
+	inpt.setText("Encantado de conocerte.");
 	inpt.setEditable(false);	//crea el dialogo
 	inpt.setBounds(10, espacio, 200, 30);
 	espacio-=30;
