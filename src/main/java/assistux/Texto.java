@@ -59,17 +59,17 @@ public class Texto {
 											espacio = h.getEspacio();
 											}
 										else {
-								String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
-								if(!txt.equals("")){	// si tiene numeros
-									Matematicas m = new Matematicas(texto, espacio);
-									inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
-									inpt.setBounds(10, espacio, 150, 20);
-									espacio-=30;
-								}else {
-										inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
-										inpt.setEditable(false);
-										inpt.setBounds(10, espacio, 150, 20);
-										espacio-=30;
+											String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
+											if(!txt.equals("")){	// si tiene numeros
+												Matematicas m = new Matematicas(texto, espacio);
+												inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
+												inpt.setBounds(10, espacio, 150, 20);
+												espacio-=30;
+											}else {
+													inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
+													inpt.setEditable(false);
+													inpt.setBounds(10, espacio, 150, 20);
+													espacio-=30;
 											}
 										}
 									}	
@@ -115,7 +115,8 @@ public class Texto {
 		//variaciones de calendario/evento
 		public static boolean variacionesEvento(String texto) {
 			String[] vEvento = {"crear", "hacer", "agendar", "reservar", "apartar", "programar", "realizar",
-								"crea", "haz", "agenda", "reserva", "aparta", "programa", "realiza"};
+								"crea", "haz", "agenda", "reserva", "aparta", "programa", "realiza",
+								"agendame", "hazme", "reservame", "programame", "realizame", "creame", "apartame"};
 			for(int i = 0; i < vEvento.length; i++) {
 				if(texto.equalsIgnoreCase(vEvento[i] + " evento")		||
 					texto.equalsIgnoreCase(vEvento[i] + " un evento")	||
@@ -130,7 +131,7 @@ public class Texto {
 		
 		public static boolean vChistes(String texto) {
 			String[] vChistes = {"cuenta", "cuentame", "dime", "dame", "chiste", "contar", "cuenta",
-					"decime", "escribe", "escribeme"};
+								 "decime", "escribe", "escribeme"};
 				for(int i = 0; i < vChistes.length; i++) {
 						if(texto.equalsIgnoreCase(vChistes[i] + " un chiste")		||
 							texto.equalsIgnoreCase(vChistes[i] + " chiste")			||
@@ -173,9 +174,8 @@ return false;
 		public static boolean vHola(String texto) {
 			String[] vHola = {"Hey", "Hola", "que"};
 			for(int i = 0; i < vHola.length; i++) {
-				if(texto.equalsIgnoreCase(vHola[i] + " asistux")		||
-					texto.equalsIgnoreCase(vHola[i] + " karen")	||
-					texto.equalsIgnoreCase(vHola[i] + "")	||
+				if(texto.equalsIgnoreCase(vHola[i] + " assistux")		||
+					texto.equalsIgnoreCase(vHola[i])					||
 					texto.equalsIgnoreCase(vHola[i] + " onda"))
 						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
 			}
@@ -186,7 +186,7 @@ return false;
 			
 			
 			JTextField inpt= new JTextField();
-			inpt.setText("Y entretenerte");		
+			inpt.setText("Y entretenerte!");		
 			inpt.setBounds(10, espacio, 200, 20);
 			inpt.setEditable(false);
 			espacio -= 30;
@@ -200,8 +200,8 @@ return false;
 			Main.contentPane.add(inpt0);
 			
 			JTextField inpt1 = new JTextField();
-			inpt1.setText("Realizar operaciones matemáticas");		
-			inpt1.setBounds(10, espacio, 200, 20);
+			inpt1.setText("Realizar operaciones matematicas");		
+			inpt1.setBounds(10, espacio, 210, 20);
 			inpt1.setEditable(false);
 			espacio -= 30;
 			Main.contentPane.add(inpt1);
@@ -214,14 +214,14 @@ return false;
 			Main.contentPane.add(inpt2);
 			
 			JTextField inpt3 = new JTextField();
-			inpt3.setText("Puedo realizar multiples tareas");	
+			inpt3.setText("Puedo realizar multiples tareas:");	
 			inpt3.setBounds(10, espacio, 200, 20);
 			inpt3.setEditable(false);
 			espacio -= 30;
 			Main.contentPane.add(inpt3);
 			
 			JTextField inpt4 = new JTextField();
-			inpt4.setText("Seré tu asistente");	
+			inpt4.setText("Sere tu asistente");	
 			inpt4.setBounds(10, espacio, 200, 20);
 			inpt4.setEditable(false);
 			espacio -= 30;

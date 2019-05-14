@@ -94,7 +94,7 @@ public void saludo1() {
 
 public void saludo2() {
 	JTextField inpt = new JTextField();
-	inpt.setText("Hola, mis creadores me llaman Asistux.");
+	inpt.setText("Hola, mis creadores me llaman Assistux.");
 	inpt.setEditable(false);	//crea el dialogo
 	inpt.setBounds(10, espacio, 250, 30);
 	espacio-=30;

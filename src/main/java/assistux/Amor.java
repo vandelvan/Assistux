@@ -53,7 +53,7 @@ public void tAmor0() {
 	inpt2.setBounds(10, espacio, 200, 30);
 	espacio-=30;
 	JTextField inpt = new JTextField();
-	inpt.setText("Ven, abrazame¡");
+	inpt.setText("Ven, abrazame");
 	inpt.setEditable(false);	//crea el dialogo
 	inpt.setBounds(10, espacio, 200, 30);
 	espacio-=30;
@@ -92,7 +92,7 @@ public void tAmor2() {
 }
 public void tAmor3() {
 	JTextField inpt2 = new JTextField();
-	inpt2.setText("esta relación de manera profesional");
+	inpt2.setText("esta relacion de manera profesional");
 	inpt2.setEditable(false);	//crea el dialogo
 	inpt2.setBounds(10, espacio, 200, 30);
 	espacio-=30;
@@ -106,7 +106,7 @@ public void tAmor3() {
 }
 public void tAmor4() {
 	JTextField inpt2 = new JTextField();
-	inpt2.setText("amor está prohibido.");
+	inpt2.setText("amor esta prohibido.");
 	inpt2.setEditable(false);	//crea el dialogo
 	inpt2.setBounds(10, espacio, 200, 30);
 	espacio-=30;

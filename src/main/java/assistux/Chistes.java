@@ -225,7 +225,7 @@ public class Chistes {
 		inpt4.setBounds(10, espacio, 200, 30);
 		espacio-=30;
 		JTextField inpt3 = new JTextField();
-		inpt3.setText("Comprala, comprala¡¡");
+		inpt3.setText("Comprala, comprala");
 		inpt3.setEditable(false);	//crea el dialogo
 		inpt3.setBounds(10, espacio, 200, 30);
 		espacio-=30;
@@ -443,7 +443,7 @@ public class Chistes {
 		inpt2.setBounds(10, espacio, 200, 30);
 		espacio-=30;
 		JTextField inpt = new JTextField();
-		inpt.setText("¿Cual es la formula quimica del agua bendita?\r\n");
+		inpt.setText("Cual es la formula quimica del agua bendita?\r\n");
 		inpt.setEditable(false);	//crea el dialogo
 		inpt.setBounds(10, espacio, 200, 30);
 		espacio-=30;
@@ -457,7 +457,7 @@ public class Chistes {
 		inpt2.setBounds(10, espacio, 200, 30);
 		espacio-=30;
 		JTextField inpt = new JTextField();
-		inpt.setText("¿Como se despiden dos quimicos?\r\n");
+		inpt.setText("Como se despiden dos quimicos?\r\n");
 		inpt.setEditable(false);	//crea el dialogo
 		inpt.setBounds(10, espacio, 200, 30);
 		espacio-=30;

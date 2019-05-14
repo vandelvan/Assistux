@@ -64,7 +64,7 @@ private int espacio = 0;
 	
 	public void dato1() {
 		JTextField inpt3 = new JTextField();
-		inpt3.setText("al número “2” en el idioma polaco.");
+		inpt3.setText("al numero 2 en el idioma polaco.");
 		inpt3.setEditable(false);	//crea el dialogo
 		inpt3.setBounds(10, espacio, 200, 30);
 		espacio-=30;
@@ -98,7 +98,7 @@ private int espacio = 0;
 	}
 	public void dato3() {
 		JTextField inpt3 = new JTextField();
-		inpt3.setText("edificio se le llama “piso 0” ");
+		inpt3.setText("edificio se le llama piso 0 ");
 		inpt3.setEditable(false);	//crea el dialogo
 		inpt3.setBounds(10, espacio, 200, 30);
 		espacio-=30;
@@ -118,7 +118,7 @@ private int espacio = 0;
 	}
 	public void dato4() {
 		JTextField inpt2 = new JTextField();
-		inpt2.setText("Rusia es más grande que plutón.");
+		inpt2.setText("Rusia es mas grande que pluton.");
 		inpt2.setEditable(false);	//crea el dialogo
 		inpt2.setBounds(10, espacio, 200, 30);
 		espacio-=30;
@@ -192,7 +192,7 @@ private int espacio = 0;
 	}
 	public void dato8() {
 		JTextField inpt3 = new JTextField();
-		inpt3.setText("en el mundo entero.");
+		inpt3.setText("en el mundo entero... :c");
 		inpt3.setEditable(false);	//crea el dialogo
 		inpt3.setBounds(10, espacio, 200, 30);
 		espacio-=30;
@@ -232,7 +232,7 @@ private int espacio = 0;
 	}
 	public void dato10() {
 		JTextField inpt3 = new JTextField();
-		inpt3.setText("de urano fue George");
+		inpt3.setText("de Urano fue George");
 		inpt3.setEditable(false);	//crea el dialogo
 		inpt3.setBounds(10, espacio, 200, 30);
 		espacio-=30;
