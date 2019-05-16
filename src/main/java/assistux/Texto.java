@@ -57,30 +57,34 @@ public class Texto {
 											Hola h = new Hola(espacio);
 											h.saludo();
 											espacio = h.getEspacio();
-											}
-										else {
-											String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
-											if(!txt.equals("")){	// si tiene numeros
-												Matematicas m = new Matematicas(texto, espacio);
-												inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
-												inpt.setBounds(10, espacio, 150, 20);
-												espacio-=30;
 											}else {
-													inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
-													inpt.setEditable(false);
-													inpt.setBounds(10, espacio, 150, 20);
-													espacio-=30;
-											}
+												if(variacionesAbrir(texto)){
+													Abrir.abrir(texto);
+												}									
+												else {
+													String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
+													if(!txt.equals("")){	// si tiene numeros
+														Matematicas m = new Matematicas(texto, espacio);
+														inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
+														inpt.setBounds(10, espacio, 150, 20);
+														espacio-=30;
+													}else {
+															inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
+															inpt.setEditable(false);
+															inpt.setBounds(10, espacio, 150, 20);
+															espacio-=30;
+													}
+												}
+											}	
 										}
-									}	
+									}
 								}
 							}
 						}
-					}
-				} 
-			}
-			return inpt;	//regresa el dialogo para colocarse
-		} // fin metodo getInput
+					} 
+				}
+				return inpt;	//regresa el dialogo para colocarse
+			} // fin metodo getInput
 		
 		/*METODOS PARA LAS VARIACIONES DE PALABRAS*/
 		//Variaciones de correo
@@ -127,7 +131,15 @@ public class Texto {
 			return false;
 		}
 		
-		
+		public static boolean variacionesAbrir(String texto) {
+			String[] vAbrir = {"abre", "abrir"};
+			String[] textoSeparado = texto.split(" ");	//separa el String por espacios
+			for(int i=0; i < vAbrir.length; i++) {
+				if(textoSeparado[0].equalsIgnoreCase(vAbrir[i]))
+							return true;	//si tiene cualquiera de las opciones de busqueda regresa verdadero
+				}
+			return false;
+		}
 		
 		public static boolean vChistes(String texto) {
 			String[] vChistes = {"cuenta", "cuentame", "dime", "dame", "chiste", "contar", "cuenta",
@@ -139,30 +151,26 @@ public class Texto {
 							texto.equalsIgnoreCase(vChistes[i] + " otra broma")		||
 							texto.equalsIgnoreCase(vChistes[i] + " otro chiste")	||
 							texto.equalsIgnoreCase(vChistes[i] + " algo gracioso")	)
-			return true; //si tiene cualquiera de las opciones para contar un chiste regresa verdadero
-}
-return false;
-			
-			
+								return true; //si tiene cualquiera de las opciones para contar un chiste regresa verdadero
+			}
+			return false;							
 		}
-
 		public static boolean vAmor(String texto) {
 			String[] vAmor = {"te", "me"};
 				for(int i = 0; i < vAmor.length; i++) {
 						if(texto.equalsIgnoreCase(vAmor[i] + " amo")		||
 							texto.equalsIgnoreCase(vAmor[i] + " amas")		||
 							texto.equalsIgnoreCase(vAmor[i] + " amas?"))
-			return true; //si tiene cualquiera de las opciones para contar un chiste regresa verdadero
-}
-return false;
+								return true; //si tiene cualquiera de las opciones para contar un chiste regresa verdadero
+			}
+			return false;
 		}
 		
 		public static boolean vDatos(String texto) {
-			String[] vDatos = {"dime", "dame", "cuentame", "dato", "un dato","dime un"};
+			String[] vDatos = {"dime", "dame", "cuentame"};
 			for(int i = 0; i < vDatos.length; i++) {
 				if(texto.equalsIgnoreCase(vDatos[i] + " un dato")		||
 					texto.equalsIgnoreCase(vDatos[i] + " un dato curioso")	||
-					texto.equalsIgnoreCase(vDatos[i] + " curioso")		||
 					texto.equalsIgnoreCase(vDatos[i] + " curiosidad")		||
 					texto.equalsIgnoreCase(vDatos[i] + " una curiosidad")		||
 					texto.equalsIgnoreCase(vDatos[i] + " dato"))
