@@ -215,7 +215,12 @@ public class Calendario {
 
         	String calendarId = "primary";
         	event = service.events().insert(calendarId, event).execute();
-        	System.out.printf("Event created: %s\n", event.getHtmlLink());
+        	JTextField inpt = new JTextField();
+        	inpt.setText("Evento creado!");
+        	inpt.setEditable(false);	//crea el dialogo
+        	inpt.setBounds(10, espacio, 200, 30);
+        	espacio-=30;
+        	Main.contentPane.add(inpt);	//lo coloca
     }
     public int getEspacio() {
 		return espacio;
