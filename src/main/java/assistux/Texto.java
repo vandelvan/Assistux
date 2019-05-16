@@ -60,19 +60,32 @@ public class Texto {
 											}else {
 												if(variacionesAbrir(texto)){
 													Abrir.abrir(texto);
+													inpt.setText("Aqui tiene!");
+													inpt.setEditable(false);
+													inpt.setBounds(10, espacio, 200, 20);
+													espacio-=30;
 												}									
 												else {
-													String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
-													if(!txt.equals("")){	// si tiene numeros
-														Matematicas m = new Matematicas(texto, espacio);
-														inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
-														inpt.setBounds(10, espacio, 150, 20);
+													if(variacionesTraducir(texto)) {
+														Traducir.traduce(texto);
+														inpt.setText("Significa:");
+														inpt.setEditable(false);
+														inpt.setBounds(10, espacio, 200, 20);
 														espacio-=30;
-													}else {
-															inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
-															inpt.setEditable(false);
+													}
+													else{
+														String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
+														if(!txt.equals("")){	// si tiene numeros
+															Matematicas m = new Matematicas(texto, espacio);
+															inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
 															inpt.setBounds(10, espacio, 150, 20);
 															espacio-=30;
+														}else {
+																inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
+																inpt.setEditable(false);
+																inpt.setBounds(10, espacio, 150, 20);
+																espacio-=30;
+														}
 													}
 												}
 											}	
@@ -136,7 +149,16 @@ public class Texto {
 			String[] textoSeparado = texto.split(" ");	//separa el String por espacios
 			for(int i=0; i < vAbrir.length; i++) {
 				if(textoSeparado[0].equalsIgnoreCase(vAbrir[i]))
-							return true;	//si tiene cualquiera de las opciones de busqueda regresa verdadero
+							return true;	//si tiene cualquiera de las opciones de abrir regresa verdadero
+				}
+			return false;
+		}
+		public static boolean variacionesTraducir(String texto) {
+			String[] vTraducir = {"traduce", "traslada", "interpreta"};
+			String[] textoSeparado = texto.split(" ");	//separa el String por espacios
+			for(int i=0; i < vTraducir.length; i++) {
+				if(textoSeparado[0].equalsIgnoreCase(vTraducir[i]))
+							return true;	//si tiene cualquiera de las opciones de traduccion regresa verdadero
 				}
 			return false;
 		}
