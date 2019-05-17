@@ -8,83 +8,106 @@ public class Texto {
 	
 		/*Metodos*/
 		
-		//Este metodo compara el texto ingresado por el usuario y regresa un dialogo
-		public static JTextField getInput(String texto){
-			JTextField inpt = new JTextField();
-			if(texto.equalsIgnoreCase("algo")) {	//Si el texto es "algo" (literalmente)
-				inpt.setText("Que gracioso xd");	//Respuesta ironica
-				inpt.setEditable(false);			//No es editable por el usuario
-				 inpt.setBounds(10, espacio, 200, 20);	//espacio es definido anteriormente para colocar los outputs en un alto que no se sobreponga
-				 espacio-=30;	//disminuye el alto para el siguiente dialogo
-			}else {
-				if(variacionesCorreo(texto)) {	//Va a la funcion que compara las variaciones para enviar un correo
-					Correo c = new Correo(espacio);
-					c.colocarBotonEnvio();
-					espacio = c.getEspacio();
-				}else {
-					if(variacionesBusqueda(texto)) {
-						Busqueda.buscar(texto);
-						inpt.setText("Aqui tiene los resultados");
-						inpt.setEditable(false);
-						inpt.setBounds(10, espacio, 200, 20);
-						espacio-=30;
-					}else {
-						if(variacionesEvento(texto)) {
-							Calendario cal = new Calendario(espacio);
-							cal.colocarBotonEvento();
-							espacio = cal.getEspacio();
+					//Este metodo compara el texto ingresado por el usuario y regresa un dialogo
+					public static JTextField getInput(String texto){
+						JTextField inpt = new JTextField();
+						if(texto.equalsIgnoreCase("algo")) {	//Si el texto es "algo" (literalmente)
+							inpt.setText("Que gracioso xd");	//Respuesta ironica
+							inpt.setEditable(false);			//No es editable por el usuario
+							 inpt.setBounds(10, espacio, 200, 20);	//espacio es definido anteriormente para colocar los outputs en un alto que no se sobreponga
+							 espacio-=30;	//disminuye el alto para el siguiente dialogo
 						}else {
-							
-							if(vChistes(texto)){
-								Chistes c = new Chistes(espacio);
-								c.mostrarChiste();
+							if(variacionesCorreo(texto)) {	//Va a la funcion que compara las variaciones para enviar un correo
+								Correo c = new Correo(espacio);
+								c.colocarBotonEnvio();
 								espacio = c.getEspacio();
-								
 							}else {
-								if(vDatos(texto)){
-									Datos d = new Datos(espacio);
-									d.getDato();
-									espacio = d.getEspacio();
-								}
-								else {
-									if(vAmor(texto)){
-										Amor a = new Amor(espacio);
-										a.MeAma();
-										espacio = a.getEspacio();
-										}
-									else {
-										if(vHola(texto)){
-											Hola h = new Hola(espacio);
-											h.saludo();
-											espacio = h.getEspacio();
-											}else {
-												if(variacionesAbrir(texto)){
-													Abrir.abrir(texto);
-													inpt.setText("Aqui tiene!");
-													inpt.setEditable(false);
-													inpt.setBounds(10, espacio, 200, 20);
-													espacio-=30;
-												}									
-												else {
-													if(variacionesTraducir(texto)) {
-														Traducir.traduce(texto);
-														inpt.setText("Significa:");
-														inpt.setEditable(false);
-														inpt.setBounds(10, espacio, 200, 20);
-														espacio-=30;
+								if(variacionesBusqueda(texto)) {
+									Busqueda.buscar(texto);
+									inpt.setText("Aqui tiene los resultados");
+									inpt.setEditable(false);
+									inpt.setBounds(10, espacio, 200, 20);
+									espacio-=30;
+								}else {
+									if(variacionesEvento(texto)) {
+										Calendario cal = new Calendario(espacio);
+										cal.colocarBotonEvento();
+										espacio = cal.getEspacio();
+									}else {
+										
+										if(vChistes(texto)){
+											Chistes c = new Chistes(espacio);
+											c.mostrarChiste();
+											espacio = c.getEspacio();
+											
+										}else {
+											if(vDatos(texto)){
+												Datos d = new Datos(espacio);
+												d.getDato();
+												espacio = d.getEspacio();
+											}
+											else {
+												if(vAmor(texto)){
+													Amor a = new Amor(espacio);
+													a.MeAma();
+													espacio = a.getEspacio();
 													}
-													else{
-														String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
-														if(!txt.equals("")){	// si tiene numeros
-															Matematicas m = new Matematicas(texto, espacio);
-															inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
-															inpt.setBounds(10, espacio, 150, 20);
-															espacio-=30;
+												else {
+													if(vHola(texto)){
+														Hola h = new Hola(espacio);
+														h.saludo();
+														espacio = h.getEspacio();
 														}else {
-																inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
+															if(variacionesAbrir(texto)){
+																Abrir.abrir(texto);
+																inpt.setText("Aqui tiene!");
 																inpt.setEditable(false);
-																inpt.setBounds(10, espacio, 150, 20);
+																inpt.setBounds(10, espacio, 200, 20);
 																espacio-=30;
+															}									
+															else {
+																if(variacionesTraducir(texto)) {
+																	Traducir.traduce(texto);
+																	inpt.setText("Significa:");
+																	inpt.setEditable(false);
+																	inpt.setBounds(10, espacio, 200, 20);
+																	espacio-=30;
+																}
+																else{
+																	if(vPeli(texto)){
+																		Pelis p = new Pelis(espacio);
+																		p.cualPeli();
+																		espacio = p.getEspacio();
+																	}
+																	else {
+																		
+																		
+																		if(iVida(texto)){
+																			Vida v = new Vida(espacio);
+																			v.vida1();
+																			espacio = v.getEspacio();
+																		}
+																	else {
+																		if(vCancion(texto)){
+																			Cancion c = new Cancion(espacio);
+																			c.cualCancion();
+																			espacio = c.getEspacio();
+																		}
+																		else {
+																	String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
+																	if(!txt.equals("")){	// si tiene numeros
+																		Matematicas m = new Matematicas(texto, espacio);
+																		inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
+																		inpt.setBounds(10, espacio, 150, 20);
+																		espacio-=30;
+																	}else {
+																			inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
+																			inpt.setEditable(false);
+																			inpt.setBounds(10, espacio, 150, 20);
+																			espacio-=30;
+																	}
+																}
+															}
 														}
 													}
 												}
@@ -207,6 +230,42 @@ public class Texto {
 				if(texto.equalsIgnoreCase(vHola[i] + " assistux")		||
 					texto.equalsIgnoreCase(vHola[i])					||
 					texto.equalsIgnoreCase(vHola[i] + " onda"))
+						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
+			}
+			return false;
+		}
+		
+		public static boolean vPeli(String texto) {
+			String[] vPeli = {"recomiendame", "recomienda", "sugiereme ", "sugiere"};
+			for(int i = 0; i < vPeli.length; i++) {
+				if(texto.equalsIgnoreCase(vPeli[i] + " una pelicula")		||
+					texto.equalsIgnoreCase(vPeli[i] + " una peli")		||
+					texto.equalsIgnoreCase(vPeli[i] + " peli")		||
+					texto.equalsIgnoreCase(vPeli[i] + " pelicula"))
+						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
+			}
+			return false;
+		}
+		
+		public static boolean iVida(String texto) {
+			String[] iVida = {"que es"};
+			for(int i = 0; i < iVida.length; i++) {
+				if(texto.equalsIgnoreCase(iVida[i] + " vida")		||
+				   texto.equalsIgnoreCase(iVida[i] + " la vida")		||
+				   texto.equalsIgnoreCase(iVida[i] + " vida?")		||
+				   texto.equalsIgnoreCase(iVida[i] + " la vida?"))
+						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
+			}
+			return false;
+		}
+		
+		public static boolean vCancion(String texto) {
+			String[] vCancion = {"recomiendame", "recomienda", "sugiereme ", "sugiere"};
+			for(int i = 0; i < vCancion.length; i++) {
+				if(texto.equalsIgnoreCase(vCancion[i] + " una cancion")		||
+					texto.equalsIgnoreCase(vCancion[i] + " rola")		||
+					texto.equalsIgnoreCase(vCancion[i] + " una rola")		||
+					texto.equalsIgnoreCase(vCancion[i] + " cancion"))
 						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
 			}
 			return false;
