@@ -84,7 +84,7 @@ public class Texto {
 																		
 																		if(iVida(texto)){
 																			Vida v = new Vida(espacio);
-																			v.vida1();
+																			v.rVida();
 																			espacio = v.getEspacio();
 																		}
 																	else {
@@ -94,6 +94,18 @@ public class Texto {
 																			espacio = c.getEspacio();
 																		}
 																		else {
+																			if(vSerie(texto)){
+																				Seires s = new Seires(espacio);
+																				s.rSerie();
+																				espacio = s.getEspacio();
+																			}
+																			else {
+																				if(vIdeojuego(texto)){
+																					Juegos j = new Juegos(espacio);
+																					j.steam();
+																					espacio = j.getEspacio();
+																				}
+																				else {
 																	String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
 																	if(!txt.equals("")){	// si tiene numeros
 																		Matematicas m = new Matematicas(texto, espacio);
@@ -105,6 +117,8 @@ public class Texto {
 																			inpt.setEditable(false);
 																			inpt.setBounds(10, espacio, 150, 20);
 																			espacio-=30;
+																			}
+																		}
 																	}
 																}
 															}
@@ -248,11 +262,13 @@ public class Texto {
 		}
 		
 		public static boolean iVida(String texto) {
-			String[] iVida = {"que es"};
+			String[] iVida = {"que es", "que significa", "cual es"};
 			for(int i = 0; i < iVida.length; i++) {
 				if(texto.equalsIgnoreCase(iVida[i] + " vida")		||
 				   texto.equalsIgnoreCase(iVida[i] + " la vida")		||
 				   texto.equalsIgnoreCase(iVida[i] + " vida?")		||
+				   texto.equalsIgnoreCase(iVida[i] + " el significado de la vida?")		||
+				   texto.equalsIgnoreCase(iVida[i] + " el significado de lavida")		||
 				   texto.equalsIgnoreCase(iVida[i] + " la vida?"))
 						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
 			}
@@ -266,6 +282,32 @@ public class Texto {
 					texto.equalsIgnoreCase(vCancion[i] + " rola")		||
 					texto.equalsIgnoreCase(vCancion[i] + " una rola")		||
 					texto.equalsIgnoreCase(vCancion[i] + " cancion"))
+						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
+			}
+			return false;
+		}
+		
+		public static boolean vSerie(String texto) {
+			String[] vSerie = {"recomiendame", "recomienda", "sugiereme ", "sugiere"};
+			for(int i = 0; i < vSerie.length; i++) {
+				if(texto.equalsIgnoreCase(vSerie[i] + " una serie")		||
+					texto.equalsIgnoreCase(vSerie[i] + " aluna serie")		||
+					texto.equalsIgnoreCase(vSerie[i] + " serie")		||
+					texto.equalsIgnoreCase(vSerie[i] + " serie"))
+						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
+			}
+			return false;
+		}
+		
+		public static boolean vIdeojuego(String texto) {
+			String[] vIdeojuego = {"recomiendame", "recomienda", "sugiereme ", "sugiere"};
+			for(int i = 0; i < vIdeojuego.length; i++) {
+				if(texto.equalsIgnoreCase(vIdeojuego[i] + " un juego")		||
+					texto.equalsIgnoreCase(vIdeojuego[i] + " un videojuego")		||
+					texto.equalsIgnoreCase(vIdeojuego[i] + " juego")		||
+					texto.equalsIgnoreCase(vIdeojuego[i] + " algo que jugar")		||
+					texto.equalsIgnoreCase(vIdeojuego[i] + " algo para jugar")		||
+					texto.equalsIgnoreCase(vIdeojuego[i] + " videojuego"))
 						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
 			}
 			return false;

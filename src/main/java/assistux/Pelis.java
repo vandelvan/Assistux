@@ -16,7 +16,7 @@ public class Pelis {
 			
 			Random rand = new Random();
 
-			int rPeli = rand.nextInt(5);
+			int rPeli = rand.nextInt(9);
 			
 //			int rPeli = 7;
 			
@@ -74,9 +74,9 @@ public class Pelis {
 		
 		public void peli0() {
 			JTextField inpt2 = new JTextField();
-			inpt2.setText("Te puedo recomendar 'secreto en la montaña'");
+			inpt2.setText("Te puedo recomendar 'Ella'");
 			inpt2.setEditable(false);	//crea el dialogo
-			inpt2.setBounds(10, espacio, 250, 30);
+			inpt2.setBounds(10, espacio, 200, 30);
 			espacio-=30;
 			JTextField inpt = new JTextField();
 			inpt.setText("Te gusta el romance?");
