@@ -16,123 +16,119 @@ public class Texto {
 							inpt.setEditable(false);			//No es editable por el usuario
 							 inpt.setBounds(10, espacio, 200, 20);	//espacio es definido anteriormente para colocar los outputs en un alto que no se sobreponga
 							 espacio-=30;	//disminuye el alto para el siguiente dialogo
-						}else {
+						}
+						else
 							if(variacionesCorreo(texto)) {	//Va a la funcion que compara las variaciones para enviar un correo
 								Correo c = new Correo(espacio);
 								c.colocarBotonEnvio();
 								espacio = c.getEspacio();
-							}else {
-								if(variacionesBusqueda(texto)) {
-									Busqueda.buscar(texto);
-									inpt.setText("Aqui tiene los resultados");
-									inpt.setEditable(false);
-									inpt.setBounds(10, espacio, 200, 20);
+							}
+						else
+							if(variacionesBusqueda(texto)) {
+								Busqueda.buscar(texto);
+								inpt.setText("Aqui tiene los resultados");
+								inpt.setEditable(false);
+								inpt.setBounds(10, espacio, 200, 20);
+								espacio-=30;
+							}
+						else
+							if(variacionesEvento(texto)) {
+								Calendario cal = new Calendario(espacio);
+								cal.colocarBotonEvento();
+								espacio = cal.getEspacio();
+							}
+						else										
+							if(vChistes(texto)){
+								Chistes c = new Chistes(espacio);
+								c.mostrarChiste();
+								espacio = c.getEspacio();
+								
+							}
+						else
+							if(vDatos(texto)){
+								Datos d = new Datos(espacio);
+								d.getDato();
+								espacio = d.getEspacio();
+							}
+						else
+							if(vAmor(texto)){
+								Amor a = new Amor(espacio);
+								a.MeAma();
+								espacio = a.getEspacio();
+							}
+						else
+							if(vHola(texto)){
+								Hola h = new Hola(espacio);
+								h.saludo();
+								espacio = h.getEspacio();
+							}
+						else
+							if(variacionesAbrir(texto)){
+								Abrir.abrir(texto);
+								inpt.setText("Aqui tiene!");
+								inpt.setEditable(false);
+								inpt.setBounds(10, espacio, 200, 20);
+								espacio-=30;
+							}
+						else
+							if(variacionesTraducir(texto)) {
+								Traducir.traduce(texto);
+								inpt.setText("Significa:");
+								inpt.setEditable(false);
+								inpt.setBounds(10, espacio, 200, 20);
+								espacio-=30;
+							}
+						else
+							if(vPeli(texto)){
+								Pelis p = new Pelis(espacio);
+								p.cualPeli();
+								espacio = p.getEspacio();
+							}
+						else																	
+							if(iVida(texto)){
+								Vida v = new Vida(espacio);
+								v.rVida();
+								espacio = v.getEspacio();
+							}
+						else
+							if(vCancion(texto)){
+								Cancion c = new Cancion(espacio);
+								c.cualCancion();
+								espacio = c.getEspacio();
+							}
+						else
+							if(vSerie(texto)){
+								Seires s = new Seires(espacio);
+								s.rSerie();
+								espacio = s.getEspacio();
+							}
+						else
+							if(vIdeojuego(texto)){
+								Juegos j = new Juegos(espacio);
+								j.steam();
+								espacio = j.getEspacio();
+							}
+						else {
+							String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
+							for(int i = 0; i < texto.length(); i++)
+								if(!txt.equals("")			&&
+								   (texto.charAt(i) == '+'	||
+									texto.charAt(i) == '-'	||
+									texto.charAt(i) == '*'	||
+									texto.charAt(i) == '/'	)){
+									Matematicas m = new Matematicas(texto, espacio);
+									inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
+									inpt.setBounds(10, espacio, 150, 20);
 									espacio-=30;
-								}else {
-									if(variacionesEvento(texto)) {
-										Calendario cal = new Calendario(espacio);
-										cal.colocarBotonEvento();
-										espacio = cal.getEspacio();
-									}else {
-										
-										if(vChistes(texto)){
-											Chistes c = new Chistes(espacio);
-											c.mostrarChiste();
-											espacio = c.getEspacio();
-											
-										}else {
-											if(vDatos(texto)){
-												Datos d = new Datos(espacio);
-												d.getDato();
-												espacio = d.getEspacio();
-											}
-											else {
-												if(vAmor(texto)){
-													Amor a = new Amor(espacio);
-													a.MeAma();
-													espacio = a.getEspacio();
-													}
-												else {
-													if(vHola(texto)){
-														Hola h = new Hola(espacio);
-														h.saludo();
-														espacio = h.getEspacio();
-														}else {
-															if(variacionesAbrir(texto)){
-																Abrir.abrir(texto);
-																inpt.setText("Aqui tiene!");
-																inpt.setEditable(false);
-																inpt.setBounds(10, espacio, 200, 20);
-																espacio-=30;
-															}									
-															else {
-																if(variacionesTraducir(texto)) {
-																	Traducir.traduce(texto);
-																	inpt.setText("Significa:");
-																	inpt.setEditable(false);
-																	inpt.setBounds(10, espacio, 200, 20);
-																	espacio-=30;
-																}
-																else{
-																	if(vPeli(texto)){
-																		Pelis p = new Pelis(espacio);
-																		p.cualPeli();
-																		espacio = p.getEspacio();
-																	}
-																	else {
-																		
-																		
-																		if(iVida(texto)){
-																			Vida v = new Vida(espacio);
-																			v.rVida();
-																			espacio = v.getEspacio();
-																		}
-																	else {
-																		if(vCancion(texto)){
-																			Cancion c = new Cancion(espacio);
-																			c.cualCancion();
-																			espacio = c.getEspacio();
-																		}
-																		else {
-																			if(vSerie(texto)){
-																				Seires s = new Seires(espacio);
-																				s.rSerie();
-																				espacio = s.getEspacio();
-																			}
-																			else {
-																				if(vIdeojuego(texto)){
-																					Juegos j = new Juegos(espacio);
-																					j.steam();
-																					espacio = j.getEspacio();
-																				}
-																				else {
-																	String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
-																	if(!txt.equals("")){	// si tiene numeros
-																		Matematicas m = new Matematicas(texto, espacio);
-																		inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
-																		inpt.setBounds(10, espacio, 150, 20);
-																		espacio-=30;
-																	}else {
-																			inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
-																			inpt.setEditable(false);
-																			inpt.setBounds(10, espacio, 150, 20);
-																			espacio-=30;
-																			}
-																		}
-																	}
-																}
-															}
-														}
-													}
-												}
-											}	
-										}
-									}
+									break;
 								}
+							else {
+								inpt.setText("Vuelva a intentarlo :c");	//si no tiene numeros ni es "algo", no entiende y devuelve "vuelva a intentarlo"
+								inpt.setEditable(false);
+								inpt.setBounds(10, espacio, 150, 20);
+								espacio-=30;
 							}
 						}
-					} 
-				}
 				return inpt;	//regresa el dialogo para colocarse
 			} // fin metodo getInput
 		
