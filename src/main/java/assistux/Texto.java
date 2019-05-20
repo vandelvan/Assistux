@@ -115,7 +115,8 @@ public class Texto {
 								   (texto.charAt(i) == '+'	||
 									texto.charAt(i) == '-'	||
 									texto.charAt(i) == '*'	||
-									texto.charAt(i) == '/'	)){
+									texto.charAt(i) == '/'	||
+									texto.charAt(i) == '%')	){
 									Matematicas m = new Matematicas(texto, espacio);
 									inpt = m.matematicas();	//se manda al metodo para las operaciones matematicas
 									inpt.setBounds(10, espacio, 150, 20);
