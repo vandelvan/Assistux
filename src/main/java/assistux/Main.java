@@ -11,7 +11,6 @@ import javax.swing.JTextField;
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
-import java.io.File;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
@@ -58,7 +57,7 @@ public class Main extends JFrame {
 		int posY = (int) (screenSize.getHeight()*.2);	//posiciona el JFrame dependiendo del tamaño de la pantalla
 		setBounds(posX, posY, 330, 600);	//tamaño y ubicacion
 		try {
-		    final Image backgroundImage = ImageIO.read(new File("src/main/java/icon/Fondo.png"));//coloca el fondo del programa
+		    final Image backgroundImage = ImageIO.read(Main.class.getResource("/icon/Fondo.png"));//coloca el fondo del programa
 		    contentPane = new JPanel(new BorderLayout()) {
 				private static final long serialVersionUID = 1L;
 
