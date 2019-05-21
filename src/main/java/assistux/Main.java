@@ -23,9 +23,6 @@ import java.awt.Toolkit;
 
 public class Main extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	static JPanel contentPane;
 	private JTextField txtInput;
@@ -77,7 +74,14 @@ public class Main extends JFrame {
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
 		
-		txtInput = new JTextField(10);	//se crea el input
+		txtInput = new JTextField(10) {
+			private static final long serialVersionUID = 1L;
+
+			public void addNotify() {
+	            super.addNotify();
+	            requestFocus();	//da enfoque al input para escribir al iniciar el frame
+	        }
+	    };	//se crea el input
 		txtInput.setText("");
 		TextPrompt placeholder = new TextPrompt("Escribe algo...", txtInput);	//se asigna el "placeholder" para darle una pista al usuario
 	    placeholder.changeAlpha(0.75f);
@@ -88,6 +92,7 @@ public class Main extends JFrame {
 
 		JButton btnOk = new JButton("OK");
 		btnOk.setBackground(Color.WHITE);
+		getRootPane().setDefaultButton(btnOk);
 		btnOk.addActionListener(new ActionListener() {	//Al dar clic a "ok"..
 			public void actionPerformed(ActionEvent e) {
 				String texto = txtInput.getText();	//toma el string ingresado por el usuario
@@ -97,6 +102,7 @@ public class Main extends JFrame {
 				JTextField uinpt = Texto.printUserInput(texto); //imprime el texto del usuario
 				contentPane.add(uinpt);
 				txtInput.setText(""); //resetea el input
+				txtInput.requestFocus();	//da enfoque al input para escribir
 				Texto.vez();
 			}
 		});
