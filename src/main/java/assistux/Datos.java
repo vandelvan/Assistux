@@ -66,17 +66,17 @@ private int espacio = 0;
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("al numero 2 en el idioma polaco.");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 210, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Existen 17 formas de llamar");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Sabias que?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -86,12 +86,12 @@ private int espacio = 0;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("El aguacate es venenoso para las aves.");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 240, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Sabias que?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -100,17 +100,17 @@ private int espacio = 0;
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("edificio se le llama piso 0 ");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("En Polonia al primer piso de un");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Sabias que?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -120,12 +120,12 @@ private int espacio = 0;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Rusia es mas grande que pluton.");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Sabias que?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -134,17 +134,17 @@ private int espacio = 0;
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("cebolla te ayuda a no llorar.");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
-		inpt2.setText(" Masticar chicle mientras cortas");
+		inpt2.setText("Masticar chicle mientras cortas");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Sabias que?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -154,17 +154,17 @@ private int espacio = 0;
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("polinizando flores que las abejas");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Las moscas son igual o mejores");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Sabias que?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -174,17 +174,17 @@ private int espacio = 0;
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("sino gris");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("El rinoceronte blanco no es blanco");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Sabias que?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -194,17 +194,17 @@ private int espacio = 0;
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("en el mundo entero... :c");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Mexico es el mayor consumidor de coca-cola");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 275, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Sabias que?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -214,17 +214,17 @@ private int espacio = 0;
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("Que tiene forma de cubo?");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Los Wombat hacen popo");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Sabias que?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -234,17 +234,17 @@ private int espacio = 0;
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("de Urano fue George");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Durante un breve periodo el nombre oficial");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 270, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Sabias que?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);

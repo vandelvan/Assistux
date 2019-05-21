@@ -120,17 +120,17 @@ public class Chistes {
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("Y discrecion murio acribillado");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Fuego a discrecion");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("El sargento ordena:");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -140,17 +140,17 @@ public class Chistes {
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("Y el cojo le contesta: Pues ya ves.");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Que tal andas?");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Un ciego le pregunta a un cojo:?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -160,17 +160,17 @@ public class Chistes {
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("que hacia llorar a las cebollas.");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("pero tan feo");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Era un cocinero tan feo");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -180,64 +180,76 @@ public class Chistes {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Leche concentrada.");	//no es un chiste
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Que hace una vaca meditando?");	//no es un chiste
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
 	}
 	public void chiste5() {
+		JTextField inpt3 = new JTextField();
+		inpt3.setText("De un almohadazo!");
+		inpt3.setEditable(false);
+		inpt3.setBounds(10, espacio, 200, 20);
+		espacio -=30;
 		JTextField inpt2 = new JTextField();
-		inpt2.setText("De un almohadazo!");
+		inpt2.setText("que invento la cama de piedra?");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
-		inpt.setText("Como murio el hombre que invento la cama de piedra?");
+		inpt.setText("Como murio el hombre");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 320, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
+		Main.contentPane.add(inpt3);
 	}
 	public void chiste6() {
+		JTextField inpt3 = new JTextField();
+		inpt3.setText("que los que yo cuento.");
+		inpt3.setEditable(false);
+		inpt3.setBounds(10, espacio, 200, 20);
+		espacio -=30;
 		JTextField inpt2 = new JTextField();
-		inpt2.setText("encuentras un mejor chiste que los que yo cuento.");
+		inpt2.setText("encuentras un mejor chiste");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 300, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Si te miras en un espejo");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
+		Main.contentPane.add(inpt3);
 	}
 	public void chiste7() {
 		JTextField inpt4 = new JTextField();
 		inpt4.setText("Responde el otro");
 		inpt4.setEditable(false);	//crea el dialogo
-		inpt4.setBounds(10, espacio, 200, 30);
+		inpt4.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("Comprala, comprala");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("La marea sube.");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Un judio le dice a otro:");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -249,11 +261,11 @@ public class Chistes {
 		inpt1.setText("Porque estaba muerto.");
 		inpt1.setEditable(false);	//crea el dialogo
 		JTextField inpt = new JTextField();
-		inpt1.setBounds(10, espacio, 200, 30);
+		inpt1.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		inpt.setText("Porque se cayo el mono del arbol?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt1);	//lo coloca
@@ -262,17 +274,17 @@ public class Chistes {
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("FIN.");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 40, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("era tan feo que todos murieron");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Erase una vez un percebe feo");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);	//lo coloca
@@ -282,22 +294,22 @@ public class Chistes {
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("son geneticamente incompatibles.");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 240, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("no pasa nada");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt1 = new JTextField();
 		inpt1.setText("una jirafa con un humano?");
 		inpt1.setEditable(false);	//crea el dialogo
-		inpt1.setBounds(10, espacio, 200, 30);
+		inpt1.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Que pasa si cruzas");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt1);
@@ -305,34 +317,40 @@ public class Chistes {
 		Main.contentPane.add(inpt3);	//lo coloca
 	}
 	public void chiste11() {
+		JTextField inpt3 = new JTextField();
+		inpt3.setText("Pues, Broco Lee.");
+		inpt3.setEditable(false);	//crea el dialogo
+		inpt3.setBounds(10, espacio, 200, 20);
+		espacio-=30;
 		JTextField inpt2 = new JTextField();
-		inpt2.setText("Pues, Broco Lee.");
+		inpt2.setText("vegetariano de Bruce Lee?");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
-		inpt.setText("Como se llama el primo vegetariano de Bruce Lee? ");
+		inpt.setText("Como se llama el primo");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);//lo coloca
+		Main.contentPane.add(inpt3);
 	}
 	public void chiste12() {
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("por que es el hombre de acero.");	//
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Pues oxidado");	//
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Como sacas a Superman del agua?");	//
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 250, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);	//lo coloca
@@ -342,11 +360,11 @@ public class Chistes {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("!Ojojojojojojo!.");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;JTextField inpt = new JTextField();
 		inpt.setText("Como se rie un ojo?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);	//lo coloca
@@ -355,12 +373,12 @@ public class Chistes {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Hacen Pi Pi.");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Los matematicos no orinan.");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);//lo coloca
@@ -369,26 +387,26 @@ public class Chistes {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("QUARK");	//Ya da risa.
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Como le hace un pato subatomico?");	//Ya da risa.
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);//lo coloca
 	}
 	public void chiste16() {
 		JTextField inpt2 = new JTextField();
-		inpt2.setText("Nada");
+		inpt2.setText("Nada.");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 100, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Que le dice un pez a otro?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);//lo coloca
@@ -397,12 +415,12 @@ public class Chistes {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("De las ovejas feas");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("De donde viene la lana virgen?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -411,12 +429,12 @@ public class Chistes {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("- Si... mouse o menos.");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("-Eres un fanatico de la computacion?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 250, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt2);	//lo coloca
 		Main.contentPane.add(inpt);
@@ -425,12 +443,12 @@ public class Chistes {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("-Sere eza yo?");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("-Que se dijo una cereza al verse en un espejo?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 280, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);
 		Main.contentPane.add(inpt2);	//lo coloca
@@ -440,12 +458,12 @@ public class Chistes {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("H-DIOS-O");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
-		inpt.setText("Cual es la formula quimica del agua bendita?\r\n");
+		inpt.setText("Cual es la formula quimica del agua bendita?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 280, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -454,12 +472,12 @@ public class Chistes {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Acido un placer");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
-		inpt.setText("Como se despiden dos quimicos?\r\n");
+		inpt.setText("Como se despiden dos quimicos?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -468,12 +486,12 @@ public class Chistes {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Lo sodio.");	//10/10
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Tus chistes de quimica son muy malos.");	//10/10
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 250, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -482,12 +500,12 @@ public class Chistes {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("-No, yo estudio sentado");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("-Oye, tu estudias derecho?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -496,12 +514,12 @@ public class Chistes {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("En algun lugar de la mancha");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("-Donde pone cervantes el detergente?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 240, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);

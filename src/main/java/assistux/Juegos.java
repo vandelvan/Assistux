@@ -65,45 +65,46 @@ public class Juegos {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Es gratis y muy bueno");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Pues team fortress 2");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
 	}
 	public void juego2() {
 		JTextField inpt3 = new JTextField();
-		inpt3.setText("Humble Bunddle");
+		inpt3.setText("Para perder amistades");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
-		inpt2.setText("Guacameele está gratis en");
+		inpt2.setText("Muy bueno!...");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
-		inpt.setText("Si te apresuras");
+		inpt.setText("Mario kart es bueno");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
+		Main.contentPane.add(inpt3);
 	}
 	public void juego3() {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("En lo personal admiro mucho a GLaDOS");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 270, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Los juegos de Portal son muy buenos");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 270, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -112,12 +113,12 @@ public class Juegos {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Es tranquilo pero muy entretenido");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Life is strange");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -126,12 +127,12 @@ public class Juegos {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Y acaba de ser su 10 aniversario");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Minecraft nunca falla en sorprenderme");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 250, 30);
+		inpt.setBounds(10, espacio, 250, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -140,12 +141,12 @@ public class Juegos {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Dale una oportunidad");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("La saga Bioshock es preciosa");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -154,12 +155,12 @@ public class Juegos {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Pero lo puedo soportar por jugarlos");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 270, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
-		inpt.setText("Los dos Outlas nunca me dejan dormir");
+		inpt.setText("Los dos Outlast nunca me dejan dormir");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 270, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -168,26 +169,26 @@ public class Juegos {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("entretenido si lo juegas con amigos");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 250, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Heroes and General es muy");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
 	}
 	public void juego9() {
 		JTextField inpt2 = new JTextField();
-		inpt2.setText("Half Life es hermoso¡");
+		inpt2.setText("Half Life es hermoso");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Juega un clasico, o mejor dos.");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -196,20 +197,21 @@ public class Juegos {
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("Juega Fortnite entonces");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("No te parece?");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 200, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Que tal el juego de la Oca?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
+		Main.contentPane.add(inpt3);
 	}
 	
 	public int getEspacio() {

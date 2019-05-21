@@ -18,7 +18,6 @@ public class Cancion {
 
 		int rCancion = rand.nextInt(9);
 		
-//		int rPeli = 4;
 		
 		if(rCancion == 0) 
 		{
@@ -76,12 +75,12 @@ public class Cancion {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Podrias escuchar 'Bitch Lasagna'");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 220, 30);
+		inpt2.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Te gustan el rap?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -91,17 +90,17 @@ public class Cancion {
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("Me han dicho que es mejor que Ariana Chica");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 250, 30);
+		inpt3.setBounds(10, espacio, 272, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Te recomiendo a Ariana Grande");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 220, 30);
+		inpt2.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Te agrada el pop?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -110,14 +109,14 @@ public class Cancion {
 	
 	public void cancion2() {
 		JTextField inpt2 = new JTextField();
-		inpt2.setText("Te podría agradar 'I Can't Get Enough'");
+		inpt2.setText("Te podria agradar 'I Can't Get Enough'");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 220, 30);
+		inpt2.setBounds(10, espacio, 250, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Si te agrada el pop");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -127,17 +126,17 @@ public class Cancion {
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("Es bastante buena");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 220, 30);
+		inpt3.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Me han dicho que 'Idol' es buena");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 220, 30);
+		inpt2.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Si te agrada el Kpop?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -147,19 +146,19 @@ public class Cancion {
 	public void cancion4() {
 		espacio-=30;
 		JTextField inpt3 = new JTextField();
-		inpt3.setText("Solo copia y pega el link ;D");
+		inpt3.setText("my favorite things de John Coltrane");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 200, 30);
+		inpt3.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
-		inpt2.setText("https://youtu.be/dgha9S39Y6M?t=35");
+		inpt2.setText("Deberias escuchar");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 320, 30);
+		inpt2.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
-		inpt.setText("Eres de gustos finos?");
+		inpt.setText("Te gusta el jazz?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -170,17 +169,17 @@ public class Cancion {
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("Es la mejor cancion del mundo");
 		inpt3.setEditable(false);	//crea el dialogo
-		inpt3.setBounds(10, espacio, 220, 30);
+		inpt3.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("D E S P A C I T O");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 220, 30);
+		inpt2.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("He escuchado que.");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -191,12 +190,12 @@ public class Cancion {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("A mi me agrada 'Another one bites the dust'");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 250, 30);
+		inpt2.setBounds(10, espacio, 275, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Te gusta el rock?");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -206,12 +205,12 @@ public class Cancion {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("que 'I don't care' es bastante buena.");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 220, 30);
+		inpt2.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Pues he escuchado");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -221,12 +220,12 @@ public class Cancion {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("siempre me pone de buenas hehe");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 220, 30);
+		inpt2.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("El OST de guardianes de la galaxia");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
@@ -236,12 +235,12 @@ public class Cancion {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("escuchar Beethoven");
 		inpt2.setEditable(false);	//crea el dialogo
-		inpt2.setBounds(10, espacio, 220, 30);
+		inpt2.setBounds(10, espacio, 220, 20);
 		espacio-=30;
 		JTextField inpt = new JTextField();
 		inpt.setText("Pues siempre puedes");
 		inpt.setEditable(false);	//crea el dialogo
-		inpt.setBounds(10, espacio, 200, 30);
+		inpt.setBounds(10, espacio, 200, 20);
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);

@@ -18,8 +18,6 @@ public class Pelis {
 
 			int rPeli = rand.nextInt(9);
 			
-//			int rPeli = 7;
-			
 			if(rPeli == 0) 
 			{
 				peli0();
@@ -76,12 +74,12 @@ public class Pelis {
 			JTextField inpt2 = new JTextField();
 			inpt2.setText("Te puedo recomendar 'Ella'");
 			inpt2.setEditable(false);	//crea el dialogo
-			inpt2.setBounds(10, espacio, 200, 30);
+			inpt2.setBounds(10, espacio, 200, 20);
 			espacio-=30;
 			JTextField inpt = new JTextField();
 			inpt.setText("Te gusta el romance?");
 			inpt.setEditable(false);	//crea el dialogo
-			inpt.setBounds(10, espacio, 200, 30);
+			inpt.setBounds(10, espacio, 200, 20);
 			espacio-=30;
 			Main.contentPane.add(inpt);	//lo coloca
 			Main.contentPane.add(inpt2);
@@ -91,12 +89,12 @@ public class Pelis {
 			JTextField inpt2 = new JTextField();
 			inpt2.setText("Te puedo recomendar 'Los otros'");
 			inpt2.setEditable(false);	//crea el dialogo
-			inpt2.setBounds(10, espacio, 200, 30);
+			inpt2.setBounds(10, espacio, 200, 20);
 			espacio-=30;
 			JTextField inpt = new JTextField();
 			inpt.setText("Te gusta el terror?");
 			inpt.setEditable(false);	//crea el dialogo
-			inpt.setBounds(10, espacio, 200, 30);
+			inpt.setBounds(10, espacio, 200, 20);
 			espacio-=30;
 			Main.contentPane.add(inpt);	//lo coloca
 			Main.contentPane.add(inpt2);
@@ -104,19 +102,19 @@ public class Pelis {
 		
 		public void peli2() {
 			JTextField inpt3 = new JTextField();
-			inpt3.setText("Entonces deberías ver 'It follows'");
+			inpt3.setText("Entonces deberias ver 'It follows'");
 			inpt3.setEditable(false);	//crea el dialogo
-			inpt3.setBounds(10, espacio, 220, 30);
+			inpt3.setBounds(10, espacio, 220, 20);
 			espacio-=30;
 			JTextField inpt2 = new JTextField();
 			inpt2.setText("No?");
 			inpt2.setEditable(false);	//crea el dialogo
-			inpt2.setBounds(10, espacio, 200, 30);
+			inpt2.setBounds(10, espacio, 40, 20);
 			espacio-=30;
 			JTextField inpt = new JTextField();
 			inpt.setText("Te gusta dormir?");
 			inpt.setEditable(false);	//crea el dialogo
-			inpt.setBounds(10, espacio, 200, 30);
+			inpt.setBounds(10, espacio, 200, 20);
 			espacio-=30;
 			Main.contentPane.add(inpt);	//lo coloca
 			Main.contentPane.add(inpt2);
@@ -127,12 +125,12 @@ public class Pelis {
 			JTextField inpt2 = new JTextField();
 			inpt2.setText("Siempre puedes ver 'el cienpies humano'");
 			inpt2.setEditable(false);	//crea el dialogo
-			inpt2.setBounds(10, espacio, 280, 30);
+			inpt2.setBounds(10, espacio, 280, 20);
 			espacio-=30;
 			JTextField inpt = new JTextField();
 			inpt.setText("Te gusta el vomitar?");
 			inpt.setEditable(false);	//crea el dialogo
-			inpt.setBounds(10, espacio, 200, 30);
+			inpt.setBounds(10, espacio, 200, 20);
 			espacio-=30;
 			Main.contentPane.add(inpt);	//lo coloca
 			Main.contentPane.add(inpt2);
@@ -142,12 +140,12 @@ public class Pelis {
 			JTextField inpt2 = new JTextField();
 			inpt2.setText("Te puedo recomendar 'Alien 2'");
 			inpt2.setEditable(false);	//crea el dialogo
-			inpt2.setBounds(10, espacio, 210, 30);
+			inpt2.setBounds(10, espacio, 210, 20);
 			espacio-=30;
 			JTextField inpt = new JTextField();
-			inpt.setText("Te gusta la acción?");
+			inpt.setText("Te gusta la accion?");
 			inpt.setEditable(false);	//crea el dialogo
-			inpt.setBounds(10, espacio, 200, 30);
+			inpt.setBounds(10, espacio, 200, 20);
 			espacio-=30;
 			Main.contentPane.add(inpt);	//lo coloca
 			Main.contentPane.add(inpt2);
@@ -156,12 +154,12 @@ public class Pelis {
 			JTextField inpt2 = new JTextField();
 			inpt2.setText("Te puedo recomendar 'Ghost in the Shell'");
 			inpt2.setEditable(false);	//crea el dialogo
-			inpt2.setBounds(10, espacio, 250, 30);
+			inpt2.setBounds(10, espacio, 255, 20);
 			espacio-=30;
 			JTextField inpt = new JTextField();
 			inpt.setText("Te gusta la ciencia ficcion?");
 			inpt.setEditable(false);	//crea el dialogo
-			inpt.setBounds(10, espacio, 230, 30);
+			inpt.setBounds(10, espacio, 230, 20);
 			espacio-=30;
 			Main.contentPane.add(inpt);	//lo coloca
 			Main.contentPane.add(inpt2);
@@ -170,12 +168,12 @@ public class Pelis {
 			JTextField inpt2 = new JTextField();
 			inpt2.setText("Te puedo recomendar 'Ace ventura'");
 			inpt2.setEditable(false);	//crea el dialogo
-			inpt2.setBounds(10, espacio, 210, 30);
+			inpt2.setBounds(10, espacio, 250, 20);
 			espacio-=30;
 			JTextField inpt = new JTextField();
 			inpt.setText("Te gusta la comedia?");
 			inpt.setEditable(false);	//crea el dialogo
-			inpt.setBounds(10, espacio, 200, 30);
+			inpt.setBounds(10, espacio, 200, 20);
 			espacio-=30;
 			Main.contentPane.add(inpt);	//lo coloca
 			Main.contentPane.add(inpt2);
@@ -184,12 +182,12 @@ public class Pelis {
 			JTextField inpt2 = new JTextField();
 			inpt2.setText("Mi favorita del raton es 'El rey leon'");
 			inpt2.setEditable(false);	//crea el dialogo
-			inpt2.setBounds(10, espacio, 200, 30);
+			inpt2.setBounds(10, espacio, 240, 20);
 			espacio-=30;
 			JTextField inpt = new JTextField();
 			inpt.setText("Te gusta Disney?");
 			inpt.setEditable(false);	//crea el dialogo
-			inpt.setBounds(10, espacio, 200, 30);
+			inpt.setBounds(10, espacio, 200, 20);
 			espacio-=30;
 			Main.contentPane.add(inpt);	//lo coloca
 			Main.contentPane.add(inpt2);
@@ -198,17 +196,17 @@ public class Pelis {
 			JTextField inpt3 = new JTextField();
 			inpt3.setText("'La princesa mononoke'");
 			inpt3.setEditable(false);	//crea el dialogo
-			inpt3.setBounds(10, espacio, 210, 30);
+			inpt3.setBounds(10, espacio, 210, 20);
 			espacio-=30;
 			JTextField inpt2 = new JTextField();
 			inpt2.setText("Entonces no te puedes perder");
 			inpt2.setEditable(false);	//crea el dialogo
-			inpt2.setBounds(10, espacio, 210, 30);
+			inpt2.setBounds(10, espacio, 210, 20);
 			espacio-=30;
 			JTextField inpt = new JTextField();
 			inpt.setText("Te gusta Studio Ghibli");
 			inpt.setEditable(false);	//crea el dialogo
-			inpt.setBounds(10, espacio, 200, 30);
+			inpt.setBounds(10, espacio, 200, 20);
 			espacio-=30;
 			Main.contentPane.add(inpt);	//lo coloca
 			Main.contentPane.add(inpt2);
@@ -218,12 +216,12 @@ public class Pelis {
 			JTextField inpt2 = new JTextField();
 			inpt2.setText("A mi me encanta 'la naranja mecanica'");
 			inpt2.setEditable(false);	//crea el dialogo
-			inpt2.setBounds(10, espacio, 220, 30);
+			inpt2.setBounds(10, espacio, 250, 20);
 			espacio-=30;
 			JTextField inpt = new JTextField();
 			inpt.setText("Te gustan los dramas?");
 			inpt.setEditable(false);	//crea el dialogo
-			inpt.setBounds(10, espacio, 200, 30);
+			inpt.setBounds(10, espacio, 200, 20);
 			espacio-=30;
 			Main.contentPane.add(inpt);	//lo coloca
 			Main.contentPane.add(inpt2);
