@@ -218,7 +218,7 @@ public class Calendario {
         	JTextField inpt = new JTextField();
         	inpt.setText("Evento creado!");
         	inpt.setEditable(false);	//crea el dialogo
-        	inpt.setBounds(10, espacio, 200, 30);
+        	inpt.setBounds(10, espacio, 200, 20);
         	espacio-=30;
         	Main.contentPane.add(inpt);	//lo coloca
     }
