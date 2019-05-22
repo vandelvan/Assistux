@@ -18,6 +18,11 @@ public class Seires {
 
 		int rSerie = rand.nextInt(10);
 		
+		if(rSerie == 0) 
+		{
+			serie0();
+		}
+		
 		if(rSerie == 1) 
 		{
 			serie1();
@@ -62,7 +67,26 @@ public class Seires {
 		
 	}
 	
-	
+	public void serie0() {
+		JTextField inpt3 = new JTextField();
+		inpt3.setText("Mr. robot");
+		inpt3.setEditable(false);	//crea el dialogo
+		inpt3.setBounds(10, espacio, 250, 20);
+		espacio-=30;
+		JTextField inpt2 = new JTextField();
+		inpt2.setText("Deberias de ver");
+		inpt2.setEditable(false);	//crea el dialogo
+		inpt2.setBounds(10, espacio, 200, 20);
+		espacio-=30;
+		JTextField inpt = new JTextField();
+		inpt.setText("Si te interesa el software libre");
+		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
+		Main.contentPane.add(inpt);	//lo coloca
+		Main.contentPane.add(inpt2);
+		Main.contentPane.add(inpt3);
+	}
 	public void serie1() {
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("Creo que se llama 'Game of Thrones'");

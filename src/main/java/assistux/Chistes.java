@@ -17,7 +17,10 @@ public class Chistes {
 
 		int nChistes = rand.nextInt(24);
 		
-		
+		if(nChistes == 0) 
+		{
+			chiste0();
+		}
 		if(nChistes == 1) 
 		{
 			chiste1();
@@ -114,6 +117,26 @@ public class Chistes {
 		{
 			chiste24();
 		}
+		if(nChistes == 25) 
+		{
+			chiste25();
+		}
+	}
+	
+	
+	public void chiste0() {
+		JTextField inpt2 = new JTextField();
+		inpt2.setText("Sus pantu-flash");
+		inpt2.setEditable(false);	//crea el dialogo
+		inpt2.setBounds(10, espacio, 200, 20);
+		espacio-=30;
+		JTextField inpt = new JTextField();
+		inpt.setText("¿Que se pone Flash cuando llega a casa?");
+		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
+		Main.contentPane.add(inpt);	//lo coloca
+		Main.contentPane.add(inpt2);
 	}
 	
 	public void chiste1() {
@@ -523,6 +546,26 @@ public class Chistes {
 		espacio-=30;
 		Main.contentPane.add(inpt);	//lo coloca
 		Main.contentPane.add(inpt2);
+	}
+	public void chiste25() {
+		JTextField inpt3 = new JTextField();
+		inpt3.setText("No mijo, es demasiado larga");	//
+		inpt3.setEditable(false);	//crea el dialogo
+		inpt3.setBounds(10, espacio, 200, 20);
+		espacio-=30;
+		JTextField inpt2 = new JTextField();
+		inpt2.setText("¿Puedo ir a una fiesta de 15 anios?");	//
+		inpt2.setEditable(false);	//crea el dialogo
+		inpt2.setBounds(10, espacio, 200, 20);
+		espacio-=30;
+		JTextField inpt = new JTextField();
+		inpt.setText("Mama, mama");	//
+		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 250, 20);
+		espacio-=30;
+		Main.contentPane.add(inpt);	//lo coloca
+		Main.contentPane.add(inpt2);	//lo coloca
+		Main.contentPane.add(inpt3);	//lo coloca
 	}
 	
 	public int getEspacio() {

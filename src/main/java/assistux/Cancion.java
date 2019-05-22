@@ -71,7 +71,7 @@ public class Cancion {
 		
 	}
 	
-	public void cancion1() {
+	public void cancion0() {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Podrias escuchar 'Bitch Lasagna'");
 		inpt2.setEditable(false);	//crea el dialogo
@@ -86,7 +86,7 @@ public class Cancion {
 		Main.contentPane.add(inpt2);
 	}
 	
-	public void cancion0() {
+	public void cancion1() {
 		JTextField inpt3 = new JTextField();
 		inpt3.setText("Me han dicho que es mejor que Ariana Chica");
 		inpt3.setEditable(false);	//crea el dialogo

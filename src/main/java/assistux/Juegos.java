@@ -18,6 +18,11 @@ public class Juegos {
 
 		int steamBot = rand.nextInt(10);
 		
+		if(steamBot == 0) 
+		{
+			juego0();
+		}
+		
 		if(steamBot == 1) 
 		{
 			juego1();
@@ -60,7 +65,21 @@ public class Juegos {
 		}
 		
 	}
-	
+
+	public void juego0() {
+		JTextField inpt2 = new JTextField();
+		inpt2.setText("Es gratis");
+		inpt2.setEditable(false);	//crea el dialogo
+		inpt2.setBounds(10, espacio, 200, 20);
+		espacio-=30;
+		JTextField inpt = new JTextField();
+		inpt.setText("The sims");
+		inpt.setEditable(false);	//crea el dialogo
+		inpt.setBounds(10, espacio, 200, 20);
+		espacio-=30;
+		Main.contentPane.add(inpt);	//lo coloca
+		Main.contentPane.add(inpt2);
+	}
 	public void juego1() {
 		JTextField inpt2 = new JTextField();
 		inpt2.setText("Es gratis y muy bueno");

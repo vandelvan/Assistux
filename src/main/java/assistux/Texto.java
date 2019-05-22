@@ -108,6 +108,12 @@ public class Texto {
 								j.steam();
 								espacio = j.getEspacio();
 							}
+							else
+								if(vAsistentes(texto)){
+									Asistentes a = new Asistentes(espacio);
+									a.asist();
+									espacio = a.getEspacio();
+								}
 						else {
 							String txt = texto.replaceAll("\\D+","");	//le quita las letras a la cadena para verificar si tiene numeros
 							for(int i = 0; i < texto.length(); i++)
@@ -309,7 +315,22 @@ public class Texto {
 			}
 			return false;
 		}
+		//---------------------------------------------------------------------------------------------
+		public static boolean vAsistentes(String texto) {
+			String[] vAsistentes = {"hola","oye","hey","ayudame", "como estas", "necesito que me ayudes"};
+			for(int i = 0; i < vAsistentes.length; i++) {
+				if(texto.equalsIgnoreCase(vAsistentes[i] + " Siri")		||
+					texto.equalsIgnoreCase(vAsistentes[i] + " Alexa")		||
+					texto.equalsIgnoreCase(vAsistentes[i] + " Cortana")  ||
+					texto.equalsIgnoreCase("Ok Google"))
+				
+						return true; //si tiene cualquiera de las opciones para crear un evento regresa verdadero
+			}
+			return false;
+		}
 		
+		
+		//---------------------------------------------------------------------------------------------
 		public static void bienvenida() {
 			
 			
