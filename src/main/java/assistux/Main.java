@@ -6,6 +6,7 @@ import java.awt.Image;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JRootPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.imageio.ImageIO;
@@ -24,7 +25,7 @@ public class Main extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	static JPanel contentPane;
-	private JTextField txtInput;
+	public static JTextField txtInput;
 	static boolean primerVez = true;
 	static Main frame;
 	/**
@@ -47,6 +48,7 @@ public class Main extends JFrame {
 	 * Create the frame.
 	 */
 	public Main(){
+		JRootPane root= getRootPane();
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("/icon/assistux.png"))); //Se asigna el icono
 		setBackground(UIManager.getColor("ScrollBar.trackHighlightForeground"));
 		setTitle("Assistux");	//se pone el titulo del frame
@@ -72,7 +74,10 @@ public class Main extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
-		
+		crearPane(root);
+		Texto.bienvenida();
+	}
+	static void crearPane(JRootPane root) {
 		txtInput = new JTextField(10) {
 			private static final long serialVersionUID = 1L;
 
@@ -91,7 +96,7 @@ public class Main extends JFrame {
 
 		JButton btnOk = new JButton("OK");
 		btnOk.setBackground(Color.WHITE);
-		getRootPane().setDefaultButton(btnOk);
+		root.setDefaultButton(btnOk);
 		btnOk.addActionListener(new ActionListener() {	//Al dar clic a "ok"..
 			public void actionPerformed(ActionEvent e) {
 				String texto = txtInput.getText();	//toma el string ingresado por el usuario
@@ -102,12 +107,10 @@ public class Main extends JFrame {
 				contentPane.add(uinpt);
 				txtInput.setText(""); //resetea el input
 				txtInput.requestFocus();	//da enfoque al input para escribir
-				Texto.vez();
+				Texto.vez(texto);
 			}
 		});
 		btnOk.setBounds(240, 520, 53, 29);
 		contentPane.add(btnOk);
-		if(primerVez)
-			Texto.bienvenida();
 	}
 }
